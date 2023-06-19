@@ -19,6 +19,10 @@
         <color rgba="0.0 0.0 0.0 1.0"/>
     </material>
 
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+
     <!-- BASE LINK-->
 
     <!-- Using diferential mobile robots its better to use de center of the two wheels as the base link-->
