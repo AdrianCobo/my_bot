@@ -1,7 +1,13 @@
 ## Robot Package Template
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+Notes:
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+If you create a new file, you have to execute colcon build --symlink-install
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+launch:
+
+Rviz2:
+
+rviz2 -d path_to_file.rviz
+
+References: https://github.com/joshnewans/articubot_one
