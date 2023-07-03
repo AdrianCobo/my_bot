@@ -52,6 +52,20 @@
                 <frame_name>camera_link_optical</frame_name>
                 <min_depth>0.1</min_depth>
                 <max_depth>100.0</max_depth>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <pointCloudCutoff>0.5</pointCloudCutoff>
+                <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+                <distortionK1>0</distortionK1>
+                <distortionK2>0</distortionK2>
+                <distortionK3>0</distortionK3>
+                <distortionT1>0</distortionT1>
+                <distortionT2>0</distortionT2>
+                <CxPrime>0</CxPrime>
+                <Cx>0</Cx>
+                <Cy>0</Cy>
+                <focalLength>0</focalLength>
+                <hackBaseline>0</hackBaseline>
             </plugin>
         </sensor>
     </gazebo>
