@@ -45,3 +45,9 @@ https://www.amazon.es/Slamtec-RPLIDAR-esc%C3%A1ner-bst%C3%A1culos-navegaci%C3%B3
 Total actual: 254,46€
 
 Total previsto: 451€
+
+Use pal_gazebo_worlds:
+$ git clone https://github.com/AdrianCobo/Pal_Gazebo_Worlds.git # in your ws/src
+$ colcon build --symlink-install
+$ change world_name at config/map_params.yaml
+$ ros2 launch my_bot launch_sim.launch.py
