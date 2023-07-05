@@ -33,6 +33,9 @@ https://www.tiendatec.es/raspberry-pi/accesorios/1980-disipador-integral-con-ven
 
 Gastos de envio de lo anterior(3.95)
 
+Micro-ssd 64GB(10€):
+https://www.elcorteingles.es/search/?s=microssd&hierarchy=&deep_search=&stype=text_box
+
 Cable usb a usbc (3.9€):
 Alcampo
 
