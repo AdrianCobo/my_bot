@@ -45,7 +45,38 @@ Alcampo
 Slamtec RPLIDAR A1 2D 360 grados 12 metros(119.99€):
 https://www.amazon.es/Slamtec-RPLIDAR-esc%C3%A1ner-bst%C3%A1culos-navegaci%C3%B3n/dp/B07TJW5SXF
 
-Total actual: 254,46€
+ZOP POWER 11.1V 2700mAh 30C 3S LiPo Battery XT60 Plug(20.24€ + ShippingFee:7.96€ = 28.60)
+https://usa.banggood.com/ZOP-POWER-11_1V-2700mAh-30C-3S-LiPo-Battery-XT60-Plug-for-RC-Drone-p-1984639.html?cur_warehouse=CN
+
+Multimeter AC/DC Votage Current...(9.19€)
+https://usa.banggood.com/ANENG-SZ302-Digital-Multimeter-AC-or-DC-Votage-Current-Automatic-Tester-NCV-Detector-Resistance-Ohm-Ammeter-Capacitance-Meter-p-1975571.html?cur_warehouse=CN&ID=6287830
+
+80W 6A Lipo Battery Balance Charger with Power Supply Adapter(25.52€)
+https://usa.banggood.com/index.php?com=account&t=ordersDetail&ordersId=112329387&version=2&status=0
+
+Conectores de bala XT60 XT-60 macho y hembra, cable de silicona de 14 AWG (1.48€)
+https://es.aliexpress.com/item/1005003658392996.html?spm=a2g0o.order_list.order_list_main.5.192e194dBpok7U&gatewayAdapt=glo2esp
+
+FATJAY-conector T a JST, adaptador de conversión macho y hembra, cable de 18AWG(2.15€)
+https://es.aliexpress.com/item/32912278147.html?spm=a2g0o.order_list.order_list_main.10.192e194dBpok7U&gatewayAdapt=glo2esp
+
+Caja de fusibles impermeable para coche, portafusibles estándar(2.11€)
+https://es.aliexpress.com/item/1005003617756967.html?spm=a2g0o.order_list.order_list_main.15.192e194dBpok7U&gatewayAdapt=glo2esp
+
+Lote de 10 conectores macho y hembra Jack 12V(0.99€):
+https://es.aliexpress.com/item/1005004369381250.html?spm=a2g0o.order_list.order_list_main.20.192e194dBpok7U&gatewayAdapt=glo2esp
+
+Interruptor basculante KCD1, interruptor de encendido de 3 pines con luz... (0.72€)
+https://es.aliexpress.com/item/32957731774.html?spm=a2g0o.order_list.order_list_main.25.192e194dBpok7U&gatewayAdapt=glo2esp
+
+Arduino uno:
+https://www.amazon.es/Arduino-UNO-A000066-microcontrolador-ATmega328/dp/B008GRTSV6/ref=sr_1_1_sspa?keywords=arduino+uno&qid=1688576294&s=electronics&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
+
+FAlta poner los links solo de la compra de amazon
+
+Total actual: 468,45€
+
+Gastado por mi:429,17€ microssd regalada y arduino uno ya lo tenía
 
 Total previsto: 451€
 
