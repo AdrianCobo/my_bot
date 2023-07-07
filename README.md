@@ -2,9 +2,11 @@
 
 [Project based on](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## Installation:
+## My bot Mk1
 
----
+![alt text](https://github.com/AdrianCobo/my_bot/blob/main/imgs/my_bot_mk1.png)
+
+## Installation:
 
 ```console
     sudo apt-get install ros-humble-gazebo-ros-pkgs ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-twist-mux ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control ros-humble-slam-toolbox
@@ -13,8 +15,6 @@
     git clone https://github.com/AdrianCobo/Pal_Gazebo_Worlds.git
     colcon build --symlink-install
 ```
-
----
 
 ## Launch examples:
 
