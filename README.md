@@ -1,5 +1,7 @@
 # My bot package
 
+[Project based on](https://github.com/joshnewans/articubot_one)
+
 ## Installation:
 
 ---
@@ -39,59 +41,81 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
 
-rviz2 -d path_to_file.rviz
+### Gazebo Simulation and Mapping
 
-[Project based on](https://github.com/joshnewans/articubot_one)
+```console
+    ros2 launch my_bot launch_sim.launch.py
+    cd ~/your_ws
+    ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=true
+    cd ~/your_ws
+    rviz2 -d src/my_bot/robot_view.rviz
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
 
-Bill:
-[CAMARA OFICIAL 8MPX V2 PARA RASPBERRY PI (27.95)€](https://www.tiendatec.es/raspberry-pi/camaras/236-camara-oficial-8mpx-v2-para-raspberry-pi-652508442112.html)
+You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
 
-[RASPBERRY PI 4 - MODELO B - 4GB (78.95€)](https://www.tiendatec.es/raspberry-pi/gama-raspberry-pi/1100-raspberry-pi-4-modelo-b-4gb-765756931182.html)
+### Gazebo Simulation and nav2 localization
 
-[DISIPADOR INTEGRAL CON VENTILADOR CONTROLADO POR SOFTWARE - PWM(9.95 €)](https://www.tiendatec.es/raspberry-pi/accesorios/1980-disipador-integral-con-ventilador-controlado-por-software-pwm-8472496024945.html)
+```console
+    ros2 launch my_bot launch_sim.launch.py
+    cd ~/your_ws
+    rviz2 -d src/my_bot/robot_view.rviz
+    cd ~/your_ws
+    ros2 launch nav2_bringup localization_launch.py map:=./src/my_bot/maps/home.yaml use_sim_time:=true
+    # publish a 2D point using rviz at your robot map position
+    ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+```
 
-Gastos de envio de lo anterior(3.95€)
+You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
 
-[Micro-ssd 64GB(10€)](https://www.elcorteingles.es/search/?s=microssd&hierarchy=&deep_search=&stype=text_box)
+## Bill
 
-Cable usb a usbc (3.9€):
-Alcampo
+- [CAMARA OFICIAL 8MPX V2 PARA RASPBERRY PI (27.95)€](https://www.tiendatec.es/raspberry-pi/camaras/236-camara-oficial-8mpx-v2-para-raspberry-pi-652508442112.html)
 
-Cable HDMI a micro-usb(9.77€):
-Alcampo
+- [RASPBERRY PI 4 - MODELO B - 4GB (78.95€)](https://www.tiendatec.es/raspberry-pi/gama-raspberry-pi/1100-raspberry-pi-4-modelo-b-4gb-765756931182.html)
 
-[Slamtec RPLIDAR A1 2D 360 grados 12 metros(119.99€)](https://www.amazon.es/Slamtec-RPLIDAR-esc%C3%A1ner-bst%C3%A1culos-navegaci%C3%B3n/dp/B07TJW5SXF)
+- [DISIPADOR INTEGRAL CON VENTILADOR CONTROLADO POR SOFTWARE - PWM(9.95 €)](https://www.tiendatec.es/raspberry-pi/accesorios/1980-disipador-integral-con-ventilador-controlado-por-software-pwm-8472496024945.html)
 
-[ZOP POWER 11.1V 2700mAh 30C 3S LiPo Battery XT60 Plug(20.24€ + ShippingFee:7.96€ = 28.60)](https://usa.banggood.com/ZOP-POWER-11_1V-2700mAh-30C-3S-LiPo-Battery-XT60-Plug-for-RC-Drone-p-1984639.html?cur_warehouse=CN)
+- Gastos de envio de lo anterior(3.95€)
 
-[Multimeter AC/DC Votage Current...(9.19€)](https://usa.banggood.com/ANENG-SZ302-Digital-Multimeter-AC-or-DC-Votage-Current-Automatic-Tester-NCV-Detector-Resistance-Ohm-Ammeter-Capacitance-Meter-p-1975571.html?cur_warehouse=CN&ID=6287830)
+- [Micro-ssd 64GB(10€)](https://www.elcorteingles.es/search/?s=microssd&hierarchy=&deep_search=&stype=text_box)
 
-[80W 6A Lipo Battery Balance Charger with Power Supply Adapter(25.52€)](https://usa.banggood.com/index.php?com=account&t=ordersDetail&ordersId=112329387&version=2&status=0)
+- Cable usb a usbc (3.9€): Alcampo
 
-[Conectores de bala XT60 XT-60 macho y hembra, cable de silicona de 14 AWG (1.48€)](https://es.aliexpress.com/item/1005003658392996.html?spm=a2g0o.order_list.order_list_main.5.192e194dBpok7U&gatewayAdapt=glo2esp)
+- Cable HDMI a micro-usb(9.77€): Alcampo
 
-[FATJAY-conector T a JST, adaptador de conversión macho y hembra, cable de 18AWG(2.15€)](https://es.aliexpress.com/item/32912278147.html?spm=a2g0o.order_list.order_list_main.10.192e194dBpok7U&gatewayAdapt=glo2esp)
+- [Slamtec RPLIDAR A1 2D 360 grados 12 metros(119.99€)](https://www.amazon.es/Slamtec-RPLIDAR-esc%C3%A1ner-bst%C3%A1culos-navegaci%C3%B3n/dp/B07TJW5SXF)
 
-[Caja de fusibles impermeable para coche, portafusibles estándar(2.11€)](https://es.aliexpress.com/item/1005003617756967.html?spm=a2g0o.order_list.order_list_main.15.192e194dBpok7U&gatewayAdapt=glo2esp)
+- [ZOP POWER 11.1V 2700mAh 30C 3S LiPo Battery XT60 Plug(20.24€ + ShippingFee:7.96€ = 28.60)](https://usa.banggood.com/ZOP-POWER-11_1V-2700mAh-30C-3S-LiPo-Battery-XT60-Plug-for-RC-Drone-p-1984639.html?cur_warehouse=CN)
 
-[Lote de 10 conectores macho y hembra Jack 12V(0.99€)](https://es.aliexpress.com/item/1005004369381250.html?spm=a2g0o.order_list.order_list_main.20.192e194dBpok7U&gatewayAdapt=glo2esp)
+- [Multimeter AC/DC Votage Current...(9.19€)](https://usa.banggood.com/ANENG-SZ302-Digital-Multimeter-AC-or-DC-Votage-Current-Automatic-Tester-NCV-Detector-Resistance-Ohm-Ammeter-Capacitance-Meter-p-1975571.html?cur_warehouse=CN&ID=6287830)
 
-[Interruptor basculante KCD1, interruptor de encendido de 3 pines con luz... (0.72€)](https://es.aliexpress.com/item/32957731774.html?spm=a2g0o.order_list.order_list_main.25.192e194dBpok7U&gatewayAdapt=glo2esp)
+- [80W 6A Lipo Battery Balance Charger with Power Supply Adapter(25.52€)](https://usa.banggood.com/index.php?com=account&t=ordersDetail&ordersId=112329387&version=2&status=0)
 
-[Arduino uno (29.28€)](https://www.amazon.es/Arduino-UNO-A000066-microcontrolador-ATmega328/dp/B008GRTSV6/ref=sr_1_1_sspa?keywords=arduino+uno&qid=1688576294&s=electronics&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
+- [Conectores de bala XT60 XT-60 macho y hembra, cable de silicona de 14 AWG (1.48€)](https://es.aliexpress.com/item/1005003658392996.html?spm=a2g0o.order_list.order_list_main.5.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-[Controlador L298N Motores DC PAP Driver Stepper Doble puente H (3.99€)](https://www.amazon.es/gp/product/B07YNR5KWP/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+- [FATJAY-conector T a JST, adaptador de conversión macho y hembra, cable de 18AWG(2.15€)](https://es.aliexpress.com/item/32912278147.html?spm=a2g0o.order_list.order_list_main.10.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-[Cable Eléctrico 18 AWG (7,99€)](https://www.amazon.es/gp/product/B075M4VJ8J/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
+- [Caja de fusibles impermeable para coche, portafusibles estándar(2.11€)](https://es.aliexpress.com/item/1005003617756967.html?spm=a2g0o.order_list.order_list_main.15.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-[2x DC 12V DIY Encoder Motorreductor Con Soporte de Montaje (24.74€)](https://www.amazon.es/gp/product/B07WT22RNJ/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+- [Lote de 10 conectores macho y hembra Jack 12V(0.99€)](https://es.aliexpress.com/item/1005004369381250.html?spm=a2g0o.order_list.order_list_main.20.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-[Hub USB 3.0 Alimentado (22.99€)](https://www.amazon.es/gp/product/B0BCPB7HQX/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+- [Interruptor basculante KCD1, interruptor de encendido de 3 pines con luz... (0.72€)](https://es.aliexpress.com/item/32957731774.html?spm=a2g0o.order_list.order_list_main.25.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-[20Pcs Bloques de Terminales Eléctricos Regleta Electrica (14.99€)](https://www.amazon.es/gp/product/B092RZR3LX/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+- [Arduino uno (29.28€)](https://www.amazon.es/Arduino-UNO-A000066-microcontrolador-ATmega328/dp/B008GRTSV6/ref=sr_1_1_sspa?keywords=arduino+uno&qid=1688576294&s=electronics&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
 
-Gastos de envio de los 4 ultimos productos(3.29€), descuento de (-3.99€) e impuestos(17.26€)
+- [Controlador L298N Motores DC PAP Driver Stepper Doble puente H (3.99€)](https://www.amazon.es/gp/product/B07YNR5KWP/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
 
-[df-dfr0205 convertidor Step Down (21,27€)](https://www.amazon.es/gp/product/B07FS7SLCB/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+- [Cable Eléctrico 18 AWG (7,99€)](https://www.amazon.es/gp/product/B075M4VJ8J/ref=ppx_od_dt_b_asin_title_s01?ie=UTF8&psc=1)
+
+- [2x DC 12V DIY Encoder Motorreductor Con Soporte de Montaje (24.74€)](https://www.amazon.es/gp/product/B07WT22RNJ/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+
+- [Hub USB 3.0 Alimentado (22.99€)](https://www.amazon.es/gp/product/B0BCPB7HQX/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+
+- [20Pcs Bloques de Terminales Eléctricos Regleta Electrica (14.99€)](https://www.amazon.es/gp/product/B092RZR3LX/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
+
+- Gastos de envio de los 4 ultimos productos(3.29€), descuento de (-3.99€) e impuestos(17.26€)
+
+- [df-dfr0205 convertidor Step Down (21,27€)](https://www.amazon.es/gp/product/B07FS7SLCB/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
 
 Total actual: 468,45€
