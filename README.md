@@ -1,6 +1,6 @@
 # My bot package
 
-[Project based on](https://github.com/joshnewans/articubot_one)
+[Project based on](https://www.youtube.com/@ArticulatedRobotics/videos)
 
 ## Installation:
 
