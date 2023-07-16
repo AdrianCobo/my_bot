@@ -94,7 +94,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - [Conectores de bala XT60 XT-60 macho y hembra, cable de silicona de 14 AWG (1.48€)](https://es.aliexpress.com/item/1005003658392996.html?spm=a2g0o.order_list.order_list_main.5.192e194dBpok7U&gatewayAdapt=glo2esp)
 
-- [FATJAY-conector T a JST, adaptador de conversión macho y hembra, cable de 18AWG(2.15€)](https://es.aliexpress.com/item/32912278147.html?spm=a2g0o.order_list.order_list_main.10.192e194dBpok7U&gatewayAdapt=glo2esp)
+- [Pin JST enchufe conector (1.76€)](https://es.aliexpress.com/item/1005005334563700.html?spm=a2g0o.order_list.order_list_main.5.747f194dYkC6bS&gatewayAdapt=glo2esp)
 
 - [Caja de fusibles impermeable para coche, portafusibles estándar(2.11€)](https://es.aliexpress.com/item/1005003617756967.html?spm=a2g0o.order_list.order_list_main.15.192e194dBpok7U&gatewayAdapt=glo2esp)
 
@@ -118,4 +118,4 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - [df-dfr0205 convertidor Step Down (21,27€)](https://www.amazon.es/gp/product/B07FS7SLCB/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
 
-Total actual: 468,45€
+Total actual: 468,10€
