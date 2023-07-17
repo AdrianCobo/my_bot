@@ -118,4 +118,8 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - [df-dfr0205 convertidor Step Down (21,27€)](https://www.amazon.es/gp/product/B07FS7SLCB/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1)
 
-Total actual: 468,10€
+- cable tie 50u (1,29€): Alcampo
+
+- Caster Wheel (2,5€): Alcampo
+
+Total actual: 471,92€
