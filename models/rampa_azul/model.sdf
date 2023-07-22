@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rampa_cubo">
+    <link name="rampa">
+      <pose>-0.1 0 0 0 2.65 0</pose> <!-- Posición y orientación de la rampa -->
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>3 2 0.1</size> <!-- Dimensiones de la rampa -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name> <!-- Material azul predefinido en Gazebo -->
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>3 2 0.1</size> <!-- Dimensiones de la rampa -->
+          </box>
+        </geometry>
+      </collision>
+      <static>true</static> <!-- Hacer que el objeto sea estático -->
+    </link>
+    <link name="cubo">
+      <pose>3.2 0 0 0 0 0</pose> <!-- Posición del cubo -->
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>4 2 1.5</size> <!-- Dimensiones del cubo -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name> <!-- Material azul predefinido en Gazebo -->
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>4 2 1.5</size> <!-- Dimensiones del cubo -->
+          </box>
+        </geometry>
+      </collision>
+      <static>true</static> <!-- Hacer que el objeto sea estático -->
+    </link>
+    <link name="rampa2">
+      <pose>6.5 0 0 0 0.49 0</pose> <!-- Posición y orientación de la rampa -->
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>3 2 0.1</size> <!-- Dimensiones de la rampa -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name> <!-- Material azul predefinido en Gazebo -->
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>3 2 0.1</size> <!-- Dimensiones de la rampa -->
+          </box>
+        </geometry>
+      </collision>
+      <static>true</static> <!-- Hacer que el objeto sea estático -->
+    </link>
+    <joint name="rampa_cubo" type="fixed">
+      <parent>cubo</parent>
+      <child>rampa</child>
+      <pose>0 0 0 0 0 0</pose> <!-- Posición relativa de la rampa con respecto al cubo -->
+    </joint>
+    <joint name="rampa2_cubo" type="fixed">
+      <parent>cubo</parent>
+      <child>rampa2</child>
+      <pose>0 0 0 0 0 0</pose> <!-- Posición relativa de la rampa con respecto al cubo -->
+    </joint>
+  </model>
+</sdf>

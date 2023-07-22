@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cubo_azul">
+    <link name="cubo">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.5</size> <!-- Ancho, alto, largo de la rampa -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name> <!-- Material azul predefinido en Gazebo -->
+          </script>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5  0.5 0.5</size> <!-- Ancho, alto, largo de la rampa -->
+          </box>
+        </geometry>
+      </collision>
+      <gravity>0</gravity> <!-- Desactivar la influencia de la gravedad -->
+      <static>true</static> <!-- Hacer que el objeto sea estático -->
+    </link>
+  </model>
+</sdf>

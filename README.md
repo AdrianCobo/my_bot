@@ -14,6 +14,7 @@
     git clone (this repo)
     git clone https://github.com/AdrianCobo/Pal_Gazebo_Worlds.git
     colcon build --symlink-install
+    copy the gazebo models at the models folder to your gazebo models folder
 ```
 
 ## Launch examples:
@@ -122,4 +123,6 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - Caster Wheel (2,5€): Alcampo
 
-Total actual: 471,92€
+- [Cable conector adaptador macho/hembra XT60 a Deans](https://es.aliexpress.com/item/1005004078144897.html?spm=a2g0o.order_list.order_list_main.5.6604194dwsFb3e&gatewayAdapt=glo2esp)
+
+Total actual: 474,12€
