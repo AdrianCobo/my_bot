@@ -125,4 +125,8 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - [Cable conector adaptador macho/hembra XT60 a Deans](https://es.aliexpress.com/item/1005004078144897.html?spm=a2g0o.order_list.order_list_main.5.6604194dwsFb3e&gatewayAdapt=glo2esp)
 
-Total actual: 474,12€
+- [DC Conector Jack Clavija Convertidor 5,5 x 2,1 mm DC En Línea Enchufe a 3,5 mm x 1.3mm (2.47€)](https://www.amazon.es/dp/B00L36634W?psc=1&smid=A2X1ST6CC1USDW&ref_=chk_typ_imgToDp)
+
+- Pilas AA para multimetro x8U (1.59€)
+
+Total actual: 478.18€
