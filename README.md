@@ -129,4 +129,6 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - Pilas AA para multimetro x8U (1.59€)
 
-Total actual: 478.18€
+- [bolsa de batería Lipo, bolsa de protección de seguridad ignífuga (10.99€)](https://www.amazon.es/Kinsinder-protecci%C3%B3n-seguridad-resistente-explosiones/dp/B0BMLNRTBQ/ref=sr_1_5?keywords=la+bolsa+de+lipo&qid=1690907231&sr=8-5)
+
+Total actual: 489.17€
