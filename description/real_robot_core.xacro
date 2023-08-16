@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+    <material name="orange">
+        <color rgba="1.0 0.3 0.1 1.0"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1.0 1.0"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+    </material>
+
+    <!-- BASE LINK-->
+
+    <!-- Using diferential mobile robots its better to use de center of the two wheels as the base link-->
+    <!-- Because all the geometry and turns(its going to be the center of rotation) will get easyer to get references from there-->
+    <link name="base_link"></link>
+
+    <!-- BASE_FOOTPRINT LINK necessary for slam_toolbox-->
+
+    <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+    </joint>
+
+    <link name="base_footprint">
+    </link>
+
+    <!-- CHASIS LINK -->
+
+    <!-- the origin of the chassis will be just behind the center of rotation-->
+    <joint name="chase_joint" type="fixed">
+        <origin xyz="-0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+    </joint>
+
+    <link name="chassis_link">
+        <visual name="">
+            <origin xyz="0.165 0.0 0.06" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.33 0.225 0.12"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <origin xyz="0.165 0.0 0.06" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.33 0.225 0.12"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.5" x="0.33" y="0.225" z="0.12">
+            <origin xyz="0.165 0.0 0.06" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <gazebo reference="chassis_link">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <!-- LEFT WHEEL LINK -->
+
+    <!-- continuous because it will tourn around continuously-->
+    <!-- the z axis must be pointing to the horizontal and out of the robot-->
+    <joint name="left_wheel_joint" type="continuous">
+        <origin xyz="0.0 0.155 0.0" rpy="-${pi/2} 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="left_wheel_link"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="left_wheel_link">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.029"/>
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.029"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.029" radius="0.035">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="left_wheel_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <!-- RIGHT WHEEL LINK -->
+
+    <!-- continuous because it will tourn around continuously-->
+    <!-- the z axis must be pointing to the horizontal and out of the robot-->
+    <joint name="right_wheel_joint" type="continuous">
+        <origin xyz="0.0 -0.155 0.0" rpy="${pi/2} 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="right_wheel_link"/>
+        <axis xyz="0.0 0.0 -1.0"/>
+        <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="right_wheel_link">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.029"/>
+            </geometry>
+            <material name="blue" />
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.029"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.035" radius="0.029">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="right_wheel_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <!-- CASTER WHEEL LINK -->
+
+    <!-- fixed because of little bit of cheating-->
+    <!-- the z axis must be pointing to the horizontal and out of the robot-->
+    <joint name="caster_wheel_joint" type="fixed">
+        <origin xyz="0.33 0.0 -0.03" rpy="${pi/2} 0.0 0.0"/>
+        <parent link="chassis_link"/>
+        <child link="caster_wheel_link"/>
+    </joint>
+
+    <link name="caster_wheel_link">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.02" length="0.018"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.02" length="0.018"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.018" radius="0.02">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="caster_wheel_link">
+        <material>Gazebo/Black</material>
+        <mu1 value="0.0001"/>
+        <mu2 value="0.0001"/>
+    </gazebo>
+
+</robot>
