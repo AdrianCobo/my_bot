@@ -8,7 +8,7 @@ from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch.actions import RegisterEventHandler
-from launch.event_handlers import OnProcessStart
+from launch.event_handler import OnProcessStart
 
 from launch_ros.actions import Node
 
@@ -61,7 +61,7 @@ def generate_launch_description():
     )
 
     delayed_diff_drive_spawner = RegisterEventHandler(
-        event_handlers=OnProcessStart(
+        event_handler=OnProcessStart(
             target_action=controller_manager,
             on_start=[diff_drive_spawner],
         )
@@ -74,7 +74,7 @@ def generate_launch_description():
     )
 
     delayed_joint_broad_spawner = RegisterEventHandler(
-        event_handlers=OnProcessStart(
+        event_handler=OnProcessStart(
             target_action=controller_manager,
             on_start=[joint_broad_spawner],
         )
