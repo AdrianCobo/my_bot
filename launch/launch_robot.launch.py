@@ -8,7 +8,7 @@ from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch.actions import RegisterEventHandler
-from launch.event_handler import OnProcessStart
+from launch.event_handlers import OnProcessStart
 
 from launch_ros.actions import Node
 
