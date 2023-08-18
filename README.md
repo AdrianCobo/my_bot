@@ -131,4 +131,6 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 - [bolsa de batería Lipo, bolsa de protección de seguridad ignífuga (10.99€)](https://www.amazon.es/Kinsinder-protecci%C3%B3n-seguridad-resistente-explosiones/dp/B0BMLNRTBQ/ref=sr_1_5?keywords=la+bolsa+de+lipo&qid=1690907231&sr=8-5)
 
-Total actual: 489.17€
+-  [Lipo Battery Tester Monitor de bajo Voltaje Timbre Alarma Comprobador de Voltaje con indicador LED (7.49€)](https://www.amazon.es/QC-Battery-Monitor-Zumbador-indicador/dp/B077Z1N9CS/ref=sr_1_5?keywords=salva+lipo&qid=1692383848&sprefix=salvalipo%2Caps%2C128&sr=8-5)
+
+Total actual: 499.66€
