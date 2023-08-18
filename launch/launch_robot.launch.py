@@ -24,7 +24,7 @@ def generate_launch_description():
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','rsp.launch.py'
+                    get_package_share_directory(package_name),'launch','real_robot_spawner.launch.py'
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
 
