@@ -10,7 +10,7 @@
             <param name="device">/dev/serial/by-id/usb-Arduino__www.arduino.cc__Arduino_Uno_55639313633351B07251-if00</param>
             <param name="baud_rate">57600</param>
             <param name="timeout">1000</param>
-            <param name="enc_counts_per_rev">620</param>
+            <param name="enc_counts_per_rev">630</param>
         </hardware>
         <joint name="left_wheel_joint">
             <command_interface name="velocity">
