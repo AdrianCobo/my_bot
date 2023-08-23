@@ -146,5 +146,5 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 ### Real Robot Bill:
 
-[Bill](https://github.com/AdrianCobo/my_bot/blob/main/Bill.md)
+[Bill](https://github.com/AdrianCobo/my_bot/blob/readme_updated/Bill.md)
 
