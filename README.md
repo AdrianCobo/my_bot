@@ -90,43 +90,81 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 #### Real Robot controled by a joystick:
 
-1. change world_name at config/map_params.yaml
-2.
-
+At the raspberry run:
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_robot.launch.py
 ```
 
+And at the pc that the joystick is connected run:
+```console
+    ros2 launch my_bot joystick.launch.py
+```
+// por cambiar
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
 #### Real Robot controled by a keyboard:
 
-1. change world_name at config/map_params.yaml
-2.
-
+At the raspberry run:
 ```console
-    ros2 launch my_bot launch_sim.launch.py
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 launch my_bot launch_robot.launch.py
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
+And at the pc that the keyboard is connected run:
+```console
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
 
 #### Using the Real robot Camera:
 
+At the raspberry run:
+```console
+    ros2 launch my_bot camera.launch.py
+```
+
+Wherever you want to see the image run:
+```console
+    ros2 run rqt_image_view rqt_image_view
+```
+
 #### Using the Real robot lidar:
+
+At the raspberry run:
+```console
+    ros2 launch my_bot rplidar.launch.py
+```
+
+Wherever you want to see the pointClouds run:
+```console
+    rviz2
+```
+
+and: 
+1. Change the fixed frame parameter to 'laser_frame'
+2. go to: add -> by topic -> /scan
+
 
 #### Mapping with the real robot:
 
+At the raspberry run:
 ```console
-    ros2 launch my_bot launch_sim.launch.py
-    cd ~/your_ws
-    ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=true
-    cd ~/your_ws
-    rviz2 -d src/my_bot/robot_view.rviz
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 launch my_bot launch_robot.launch.py
+    ros2 launch my_bot rplidar.launch.py
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
+If you want to see images from the camera go to the section: "Using the Real robot Camera"
+
+Wherever you want to see the map construction, execute:
+```console
+    rviz2
+    cd $(your_ws)
+    ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=false
+```
+
+At rviz:
+1. Change the fixed frame parameter to 'map'
+2. go to: add -> by topic -> /map
+
+You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
 
 #### Nav2 localization with the real robot:
 
