@@ -2,21 +2,21 @@ joy_node:
   ros__parameters:
     device_id: 0
     deadzone: 0.05
-    autorepeat_rate: 20.0
+    autorepeat_rate: 30.0
 
 teleop_node:
   ros__parameters:
     axis_linear:
       x: 1 # tested previusly with $ ros2 run joy joy_node
     scale_linear:
-      x: 0.5
+      x: 0.3
     scale_linear_turbo:
-      x: 1.0
+      x: 0.3
 
     axis_angular:
       yaw: 0
     scale_angular:
-      yaw: 0.5
+      yaw: 1.0
     scale_angular_turbo:
       yaw: 1.0
 
