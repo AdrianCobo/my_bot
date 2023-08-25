@@ -22,7 +22,7 @@
 
 ### Simulation Launch examples:
 
-#### Gazebo Simulation and joystick control:
+### Gazebo Simulation and joystick control:
 
 1. change world_name at config/map_params.yaml
 2.
@@ -33,7 +33,7 @@
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
-#### Gazebo Simulation and keyboard control:
+### Gazebo Simulation and keyboard control:
 
 1. change world_name at config/map_params.yaml
 2.
@@ -45,7 +45,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
 
-#### Gazebo Simulation and Mapping
+### Gazebo Simulation and Mapping
 
 ```console
     ros2 launch my_bot launch_sim.launch.py
@@ -58,7 +58,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
 
-#### Gazebo Simulation and nav2 localization
+### Gazebo Simulation and nav2 localization
 
 ```console
     ros2 launch my_bot launch_sim.launch.py
@@ -88,7 +88,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
     do the necesary changes at ros2_control.xacro at the params sectrion in order to use your own motors and your arduino device
     colcon build --symlink-install
 
-#### Real Robot controled by a joystick:
+### Real Robot controled by a joystick:
 
 At the raspberry run:
 ```console
@@ -102,7 +102,7 @@ And at the pc that the joystick is connected run:
 // por cambiar
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
-#### Real Robot controled by a keyboard:
+### Real Robot controled by a keyboard:
 
 At the raspberry run:
 ```console
@@ -114,7 +114,7 @@ And at the pc that the keyboard is connected run:
     ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-#### Using the Real robot Camera:
+### Using the Real robot Camera:
 
 At the raspberry run:
 ```console
@@ -126,7 +126,7 @@ Wherever you want to see the image run:
     ros2 run rqt_image_view rqt_image_view
 ```
 
-#### Using the Real robot lidar:
+### Using the Real robot lidar:
 
 At the raspberry run:
 ```console
@@ -143,7 +143,7 @@ and:
 2. go to: add -> by topic -> /scan
 
 
-#### Mapping with the real robot:
+### Mapping with the real robot:
 
 At the raspberry run:
 ```console
@@ -166,7 +166,7 @@ At rviz:
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
 
-#### Nav2 localization with the real robot:
+### Nav2 localization with the real robot:
 
 ```console
     ros2 launch my_bot launch_sim.launch.py
@@ -180,7 +180,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jd
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
 
-#### Using plansys2 with the real robot:
+### Using plansys2 with the real robot:
 
 ### Real Robot Bill:
 
