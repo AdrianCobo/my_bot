@@ -20,8 +20,8 @@ slam_toolbox:
     # will use pose
     # uncomment for localization mode
     map_file_name: /home/acobo/Desktop/ros2_ws/src/my_bot/maps/real_corridor # uncomment for localization
-    # map_start_pose: [-1.23, -1.67, 0]
-    map_start_at_dock: true # uncomment for localization
+    map_start_pose: [-1.23, -1.67, 0.0]
+    #map_start_at_dock: true # uncomment for localization
 
     debug_logging: false
     throttle_scans: 1
