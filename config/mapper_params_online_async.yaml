@@ -13,15 +13,15 @@ slam_toolbox:
     map_frame: map
     base_frame: base_footprint
     scan_topic: /scan
-    mode: mapping # mapping # localization
+    mode: localization # mapping # localization
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
     # uncomment for localization mode
-    # map_file_name: /home/adrianco/Desktop/ros2_course/src/my_bot/maps/home # uncomment for localization
-    # map_start_pose: [0.0, 0.0, 0.0]
-    # map_start_at_dock: true # uncomment for localization
+    map_file_name: /home/acobo/Desktop/ros2_ws/src/my_bot/maps/real_corridor # uncomment for localization
+    # map_start_pose: [-1.23, -1.67, 0]
+    map_start_at_dock: true # uncomment for localization
 
     debug_logging: false
     throttle_scans: 1
