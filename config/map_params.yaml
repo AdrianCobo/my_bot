@@ -33,4 +33,4 @@
 # my_world_obstacles my_world_house my_world_empty
 
 my_bot:
-  world: home
+  world: my_world_real_corridor_sim

@@ -24,18 +24,18 @@
 
 ### Gazebo Simulation and joystick control:
 
-1. change world_name at config/map_params.yaml
+1. Change the parameter 'world_name' in the config/map_params.yaml folder to select the desired Gazebo world.
 2.
 
 ```console
     ros2 launch my_bot launch_sim.launch.py
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
 ### Gazebo Simulation and keyboard control:
 
-1. change world_name at config/map_params.yaml
+1. Change the parameter 'world_name' in the config/map_params.yaml folder to select the desired Gazebo world.
 2.
 
 ```console
@@ -43,7 +43,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
     ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
 
 ### Gazebo Simulation and Mapping
 
@@ -56,7 +56,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
     ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
 
 ### Gazebo Simulation and nav2 localization
 
@@ -66,11 +66,15 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
     rviz2 -d src/my_bot/robot_view.rviz
     cd ~/your_ws
     ros2 launch nav2_bringup localization_launch.py map:=./src/my_bot/maps/home.yaml use_sim_time:=true
-    # publish a 2D point using rviz at your robot map position
+    # publish a 2D Pose Estimate using rviz at your robot map position
     ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+    # publish a 2D Nav2 Goal using rviz  
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+
+### Using plansys2 with the simulated robot:
+[Just tested on simulation](https://github.com/AdrianCobo/Plansys_patrolling_my_bot)
 
 ## Real Robot 
 
@@ -79,13 +83,12 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
     cd ~/your_ws/src
     git clone (this repo)
     git clone https://github.com/AdrianCobo/diffdrive_arduino.git
-    git clone https://github.com/AdrianCobo/diffdrive_arduino.git
     git clone https://github.com/AdrianCobo/serial
     cd diffdrive_arduino 
     git checkout 3883c00
     cd ..
     cd my_bot/description
-    do the necesary changes at ros2_control.xacro at the params sectrion in order to use your own motors and your arduino device
+    do the necesary changes at ros2_control.xacro at the params section in order to use your own motors and your arduino device
     colcon build --symlink-install
 
 ### Real Robot controled by a joystick:
@@ -100,7 +103,7 @@ And at the pc that the joystick is connected run:
     ros2 launch my_bot joystick.launch.py
 ```
 // por cambiar
-You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/Z-nW6ui-bXg?si=71UW7SLqX1jNdZbA)
 
 ### Real Robot controled by a keyboard:
 
@@ -121,7 +124,7 @@ At the raspberry run:
     ros2 launch my_bot camera.launch.py
 ```
 
-Wherever you want to see the image run:
+Wherever you want to watch the image run:
 ```console
     ros2 run rqt_image_view rqt_image_view
 ```
@@ -133,7 +136,7 @@ At the raspberry run:
     ros2 launch my_bot rplidar.launch.py
 ```
 
-Wherever you want to see the pointClouds run:
+Wherever you want to watch the pointClouds run:
 ```console
     rviz2
 ```
@@ -151,7 +154,7 @@ At the raspberry run:
     ros2 launch my_bot rplidar.launch.py
 ```
 
-If you want to see images from the camera go to the section: "Using the Real robot Camera"
+If you want to watch images from the camera go to the section: "Using the Real robot Camera"
 
 Wherever you want to see the map construction, execute:
 ```console
@@ -164,23 +167,32 @@ At rviz:
 1. Change the fixed frame parameter to 'map'
 2. go to: add -> by topic -> /map
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
+You can watch the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
 
 ### Nav2 localization with the real robot:
 
+At the raspberry run:
 ```console
-    ros2 launch my_bot launch_sim.launch.py
-    cd ~/your_ws
-    rviz2 -d src/my_bot/robot_view.rviz
-    cd ~/your_ws
-    ros2 launch nav2_bringup localization_launch.py map:=./src/my_bot/maps/home.yaml use_sim_time:=true
-    # publish a 2D point using rviz at your robot map position
-    ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+    ros2 launch my_bot launch_robot.launch.py
+    ros2 launch my_bot rplidar.launch.py
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+If you want to watch images from the camera go to the section: "Using the Real robot Camera"
+
+Wherever you want to see the map construction, execute:
+```console
+    cd path_to_your_ws
+    ros2 launch my_bot bringup_launch.py use_sim_time:=False autostart:=False map:=./src/my_bot/maps/real_corridor.yaml
+    ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/rviz/nav2_default_view.rviz
+    # click on start the startup button
+    # publish a 2D Pose Estimate using rviz at your robot map position and orientation
+    # publish a 2D Nav2 Goal using rviz at your  map
+```
+
+The video demonstration will be uploaded soon.
 
 ### Using plansys2 with the real robot:
+[Just tested on simulation for the moment](https://github.com/AdrianCobo/Plansys_patrolling_my_bot)
 
 ### Real Robot Bill:
 
