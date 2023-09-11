@@ -37,7 +37,7 @@
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
-[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg)](https://www.youtube.com/watch?v=H0Chc4LrjQw)
+[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg){ align="center" }](https://www.youtube.com/watch?v=H0Chc4LrjQw)
 
 ### Gazebo Simulation and keyboard control:
 
@@ -114,7 +114,7 @@ And at the pc that the joystick is connected run:
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Z-nW6ui-bXg?si=tQdZL9IHr-GUuOz4)
 
-[![Alt text](https://img.youtube.com/vi/Z-nW6ui-bXg/0.jpg)](https://www.youtube.com/watch?v=Z-nW6ui-bXg)
+[![Alt text align-center](https://img.youtube.com/vi/Z-nW6ui-bXg/0.jpg)](https://www.youtube.com/watch?v=Z-nW6ui-bXg)
 
 ### Real Robot controled by a keyboard:
 
