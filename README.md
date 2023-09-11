@@ -37,7 +37,7 @@
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
-[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg){ align="center" }](https://www.youtube.com/watch?v=H0Chc4LrjQw)
+[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg)]{ align="center" }(https://www.youtube.com/watch?v=H0Chc4LrjQw)
 
 ### Gazebo Simulation and keyboard control:
 
