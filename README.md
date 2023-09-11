@@ -38,8 +38,8 @@
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
 <div align="center">
-[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg)](https://www.youtube.com/watch?v=H0Chc4LrjQw)
-<div>
+<img width=500px src="https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg" alt="explode"></a href="https://www.youtube.com/watch?v=H0Chc4LrjQw">
+</div>
 
 ### Gazebo Simulation and keyboard control:
 
