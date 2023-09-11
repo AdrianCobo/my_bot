@@ -37,6 +37,8 @@
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
+[![Alt text](https://img.youtube.com/vi/-zVjHXezQI8/0.jpg)](https://www.youtube.com/watch?v=-zVjHXezQI8)
+
 ### Gazebo Simulation and keyboard control:
 
 1. change world_name at config/map_params.yaml
