@@ -182,9 +182,11 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jd
     ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
 ```
 
-You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+You can see the video demonstration here: available soon
 
 ### Using plansys2 with the real robot:
+
+available soon
 
 ### Real Robot Bill:
 
