@@ -37,6 +37,8 @@
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
+[![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg)](https://www.youtube.com/watch?v=H0Chc4LrjQw)
+
 ### Gazebo Simulation and keyboard control:
 
 1. change world_name at config/map_params.yaml
@@ -49,9 +51,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
 
-<div align="center">
-    [![Alt text](https://img.youtube.com/vi/-zVjHXezQI8/0.jpg)](https://www.youtube.com/watch?v=-zVjHXezQI8)
-</div>
+[![Alt text](https://img.youtube.com/vi/-zVjHXezQI8/0.jpg)](https://www.youtube.com/watch?v=-zVjHXezQI8)
 
 ### Gazebo Simulation and Mapping
 
@@ -66,6 +66,8 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
 
+[![Alt text](https://img.youtube.com/vi/yNdHQ1RQuCk/0.jpg)](https://www.youtube.com/watch?v=yNdHQ1RQuCk)
+
 ### Gazebo Simulation and nav2 localization
 
 ```console
@@ -79,6 +81,8 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+
+[![Alt text](https://img.youtube.com/vi/tctQYJnHBAQ/0.jpg)](https://www.youtube.com/watch?v=tctQYJnHBAQ)
 
 ## Real Robot 
 
@@ -109,6 +113,8 @@ And at the pc that the joystick is connected run:
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Z-nW6ui-bXg?si=tQdZL9IHr-GUuOz4)
+
+[![Alt text](https://img.youtube.com/vi/tQdZL9IHr-GUuOz4/0.jpg)](https://www.youtube.com/watch?v=tQdZL9IHr-GUuOz4)
 
 ### Real Robot controled by a keyboard:
 
@@ -173,6 +179,8 @@ At rviz:
 2. go to: add -> by topic -> /map
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
+
+[![Alt text](https://img.youtube.com/vi/o-zX6n-kzWKuK6uY/0.jpg)](https://www.youtube.com/watch?v=o-zX6n-kzWKuK6uY)
 
 ### Nav2 localization with the real robot:
 
