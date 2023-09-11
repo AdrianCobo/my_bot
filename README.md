@@ -114,7 +114,7 @@ And at the pc that the joystick is connected run:
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Z-nW6ui-bXg?si=tQdZL9IHr-GUuOz4)
 
-[![Alt text](https://img.youtube.com/vi/tQdZL9IHr-GUuOz4/0.jpg)](https://www.youtube.com/watch?v=tQdZL9IHr-GUuOz4)
+[![Alt text](https://img.youtube.com/vi/Z-nW6ui-bXg/0.jpg)](https://www.youtube.com/watch?v=Z-nW6ui-bXg)
 
 ### Real Robot controled by a keyboard:
 
@@ -180,7 +180,7 @@ At rviz:
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
 
-[![Alt text](https://img.youtube.com/vi/o-zX6n-kzWKuK6uY/0.jpg)](https://www.youtube.com/watch?v=o-zX6n-kzWKuK6uY)
+[![Alt text](https://img.youtube.com/vi/Q_-EYw8jdps/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
 
 ### Nav2 localization with the real robot:
 
