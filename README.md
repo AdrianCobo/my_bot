@@ -38,7 +38,7 @@
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
 
 <div align="center">
-<img width=500px src="https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg" alt="explode"></a href="https://www.youtube.com/watch?v=H0Chc4LrjQw">
+<img width=500px src="https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg" href="https://www.youtube.com/watch?v=H0Chc4LrjQw" alt="explode"></a>
 </div>
 
 ### Gazebo Simulation and keyboard control:
