@@ -39,7 +39,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 
 <div align="center">
 [![Alt text](https://img.youtube.com/vi/H0Chc4LrjQw/0.jpg)](https://www.youtube.com/watch?v=H0Chc4LrjQw)
-</div>
+<div>
 
 ### Gazebo Simulation and keyboard control:
 
