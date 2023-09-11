@@ -103,8 +103,8 @@ And at the pc that the joystick is connected run:
 ```console
     ros2 launch my_bot joystick.launch.py
 ```
-// por cambiar
-You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
+
+You can see the video demonstration here: [(Youtube)](https://youtu.be/Z-nW6ui-bXg?si=tQdZL9IHr-GUuOz4)
 
 ### Real Robot controled by a keyboard:
 
