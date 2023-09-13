@@ -1,4 +1,4 @@
-# My bot package
+# My bot package (mechatronics version)
 
 [Project based on Articulated Robotics youtube channel](https://www.youtube.com/@ArticulatedRobotics/videos)
 
