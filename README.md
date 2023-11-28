@@ -90,7 +90,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 <div align="center">
 <img width=500px rotate=90 src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode" style="transform: rotate(90deg);></a>
-</div>
+</div>  
 
 ### Real Robot Installation
     sudo apt-get install ros-humble-gazebo-ros-pkgs ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-twist-mux ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control ros-humble-slam-toolbox ros-humble-xacro
