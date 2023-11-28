@@ -88,8 +88,16 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 
 ### Real Robot Connection Diagram
 
+<style>
+    .rotate {
+        transform: rotate(90deg); /* Puedes ajustar el ángulo de rotación según tus necesidades */
+        margin: auto;
+        display: block;
+    }
+</style>
+
 <div align="center">
-<img width=500px rotate=90 src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode"></a>
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" class="rotate"></a>
 </div>
 
 ### Real Robot Installation
