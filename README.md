@@ -89,7 +89,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ### Real Robot Connection Diagram
 
 <div align="center">
-<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode" style="transform: rotate(90deg)></a>
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode" style="transform: rotate(90deg);"></a>
 </div>
 
 ### Real Robot Installation
