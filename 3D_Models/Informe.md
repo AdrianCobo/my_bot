@@ -13,6 +13,7 @@ En la siguiente animación se muestra esta primera versión del diseño 3D.
 <video width="640" height="360" controls>
   <source src="https://github.com/daquinga2020/my_bot/blob/main/3D_Models/Animaciones/Form_MP4/anim_v1.mp4" type="video/mp4">
 </video>
+<embed src="https://github.com/daquinga2020/my_bot/blob/main/3D_Models/Animaciones/Form_MP4/anim_v1.mp4" type="video/mp4" width="640" height="360" />
 (ANIMACION VERSION 1)
 
 ### Segunda versión del diseño 3D del robot
