@@ -10,10 +10,8 @@ Para tener una base de la que partir, creamos una caja maciza para posteriorment
 
 En la siguiente animación se muestra esta primera versión del diseño 3D.
 
-<video width="640" height="360" controls>
-  <source src="https://github.com/daquinga2020/my_bot/blob/main/3D_Models/Animaciones/Form_MP4/anim_v1.mp4" type="video/mp4">
-</video>
-<embed src="https://github.com/daquinga2020/my_bot/blob/main/3D_Models/Animaciones/Form_MP4/anim_v1.mp4" type="video/mp4" width="640" height="360" />
+https://github.com/daquinga2020/my_bot/assets/90764494/e568a732-69b1-45d3-80f1-09258435fc54
+
 (ANIMACION VERSION 1)
 
 ### Segunda versión del diseño 3D del robot
