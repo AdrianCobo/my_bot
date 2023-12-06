@@ -9,13 +9,13 @@ La idea inicial para el chasis del robot era utilizar una caja de zapatos de car
 Para tener una base de la que partir, creamos una caja maciza para posteriormente integrar poco a poco los elementos visibles del robot. En esta primera versión del diseño no se tenía pensado imprimir un modelo 3D por lo que no se tuvieron en cuenta las medidas de cada uno de los elementos del robot ni si estaban correctamente ubicadas.
 
 En la siguiente animación se muestra esta primera versión del diseño 3D.
-<!-- <div>
+<div>
 <p style = 'text-align:center;'>
 <iframe width="600" height = "420"
-src="/home/danikg/Uni/my_bot/3D_Models/Version_1/Anim_V1.avi">
+src="https://github.com/daquinga2020/my_bot/blob/main/3D_Models/Animaciones/Anim_V1.avi">
 </iframe>
 </div>
-</p> -->
+</p>
 (ANIMACION VERSION 1)
 
 ### Segunda versión del diseño 3D del robot
