@@ -11,10 +11,9 @@ Proyecto basado en el canal de youtube de [Articulated Robotics](https://www.you
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_sim.png" alt="explode"></a>
 </div>
 
-Este proyecto tiene como objetivo desarrollar y simular un robot diferencial del tamaño de una caja de zapatos utilizando ROS 2. A lo largo de las fases del proyecto, se explorarán diversas tecnologías y conceptos esenciales en robótica.
 
 # Objetivo General  
-El objetivo principal es implementar un robot diferencial eficiente y funcional, aprovechando las capacidades de ROS 2 para la simulación y control.
+Este proyecto tiene como objetivo desarrollar y simular un robot diferencial del tamaño de una caja de zapatos utilizando las capacidades de ROS 2 para la simulación y control de robots. A lo largo de las fases del proyecto, se explorarán diversas tecnologías y conceptos esenciales en robótica.
 
 # Fase 1: Simulación
 
