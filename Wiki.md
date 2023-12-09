@@ -87,7 +87,16 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/tctQYJnH
 
 [![Alt text](https://img.youtube.com/vi/tctQYJnHBAQ/0.jpg)](https://www.youtube.com/watch?v=tctQYJnHBAQ)
 
-# Fase 5: Sensores y actuadores reales
+# Fase 5: Planificación
+
+Se pensó también que era buena idea pensar algún uso real que se le podría dar a este robotito y como por aquel entonces la practica propuesta para la asignatura de Planificación y robótica de serviciós era la de un robot de patrullaje se decidio probar a realiza este ejercicio usando el paquete de plansys2 junto con las tecnicas de mapeado y navegación autonoma explicadas antes.
+
+Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs0qQ)
+
+[![Alt text](https://img.youtube.com/vi/MbuiRqzs0qQ/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
+
+
+# Fase 6: Sensores y actuadores reales
 
 Una vez ya completado las pruebas de simulación, se decidio comprar los componentes necesariós para poder testear el circuito del robot. 
 
@@ -102,3 +111,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 [![Alt text](https://img.youtube.com/vi/Q_-EYw8jdps/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
 
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación o de los nodos necesariós para ejecutar el codigo en un robot real parecido.
+
+# Referencias
+- [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
+- [Plansys2](https://plansys2.github.io/)
