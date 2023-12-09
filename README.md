@@ -89,14 +89,14 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ### Real Robot Connection Diagram
 
 <div align="center">
-<img width=500px rotate=90 src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode"></a
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/circuit/Circuito.svg" alt="explode"></a
 </div>
 
 ### Real Robot Installation
     sudo apt-get install ros-humble-gazebo-ros-pkgs ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-twist-mux ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control ros-humble-slam-toolbox ros-humble-xacro
     cd ~/your_ws/src
     git clone (this repo)
-    git clone https://github.com/AdrianCobo/diffdrive_arduino.git
+    git clone https://github.com/AdrianCobo/ros_arduino_bridge
     git clone https://github.com/AdrianCobo/diffdrive_arduino.git
     git clone https://github.com/AdrianCobo/serial
     cd diffdrive_arduino 
