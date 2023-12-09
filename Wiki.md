@@ -20,7 +20,7 @@ Este proyecto tiene como objetivo desarrollar y simular un robot diferencial del
 ## Fase 1.1: Uso de Tfs
 La primera aproximación elegida fue entender como funcionaba el sistema de transformadas en ros para poder verfificar el correcto comportamiento durante la simulación de nuestro robot a traves del paquete tf2
 
-<video src='https://github.com/AdrianCobo/my_bot/blob/main/animate/tfs_demo.mp4' width=180/>
+https://github.com/AdrianCobo/my_bot/blob/main/animate/tfs_demo.mp4
 
 ## Fase 1.2: Diseño de Robot a partir de URDF
 Una vez entendido como funcionan los sistemas de transformadas para las articulaciones del robot, se decidió modelar el robot utilizando el formato URDF para que fuese compatible con gazebo. Para ayudarnos en esta tarea se decidió utilizar también Xacro facilitando muchisimo esta tarea.
