@@ -69,4 +69,36 @@ Tambien como el control con teleop_twist_keyboard a veces puede ser un poco inco
 
 # Fase 4: Mapeado y navegación autónoma.
 
+Para esta fase se decidió usar los paquetes mas populares de ros2 para ambos temas. Para la construcción de mapas se usó el paquete slam_toolbox y para navegación autonoma nav2. 
+
+Para que funcionase correctamente simplemente teniamos que instalar los paquetes necesarios y completar los ficheros de configuración de ambos paquetes para que se cumpliesen nuestros requerimientos. Ademas slam_toolbox ofrece un panel para rviz2 que facilita mucho el almacenamiento de los mapas generados.
+
+```console
+    ros2 launch my_bot launch_real_sim.launch.py
+    cd ~/your_ws
+    rviz2 -d src/my_bot/robot_view.rviz
+    cd ~/your_ws
+    ros2 launch nav2_bringup localization_launch.py map:=./src/my_bot/maps/home.yaml use_sim_time:=true
+    # publish a 2D point using rviz at your robot map position
+    ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+```
+
+Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/tctQYJnHBAQ)
+
+[![Alt text](https://img.youtube.com/vi/tctQYJnHBAQ/0.jpg)](https://www.youtube.com/watch?v=tctQYJnHBAQ)
+
 # Fase 5: Sensores y actuadores reales
+
+Una vez ya completado las pruebas de simulación, se decidio comprar los componentes necesariós para poder testear el circuito del robot. 
+
+Lo mas complicado fue la comunicación de los sensores y actuadores con ros2 en concreto con el controlador de motores y el arduino ya que hacía falta crear un bridge entre ros2 y arduino o usar uno ya hecho [Opción elegida](https://github.com/joshnewans/serial_motor_demo). También usamos [codigo de Buzzology](https://github.com/AdrianCobo/diffdrive_arduino.git) para el control diferencial de los motores con arduino.
+
+Finalmente para el lidar se compró uno que era comptaible con ros2 y que tenia ya sus propios nodos y launchers de ros2.
+
+Puedes ver la lista con todos los componentes y precios [aquí](https://github.com/AdrianCobo/my_bot/blob/readme_updated/Bill.md)
+
+Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8jdps?si=o-zX6n-kzWKuK6uY)
+
+[![Alt text](https://img.youtube.com/vi/Q_-EYw8jdps/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
+
+Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación o de los nodos necesariós para ejecutar el codigo en un robot real parecido.
