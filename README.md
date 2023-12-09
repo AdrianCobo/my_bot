@@ -28,11 +28,8 @@
 
 ### Gazebo Simulation and joystick control:
 
-1. change world_name at config/map_params.yaml
-2.
-
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_real_sim.launch.py
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
@@ -45,7 +42,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 2.
 
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_real_sim.launch.py
     ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
@@ -56,7 +53,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
 ### Gazebo Simulation and Mapping
 
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_real_sim.launch.py
     cd ~/your_ws
     ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=true
     cd ~/your_ws
@@ -71,7 +68,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
 ### Gazebo Simulation and nav2 localization
 
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_real_sim.launch.py
     cd ~/your_ws
     rviz2 -d src/my_bot/robot_view.rviz
     cd ~/your_ws
@@ -191,7 +188,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/Q_-EYw8jd
 ### Nav2 localization with the real robot:
 
 ```console
-    ros2 launch my_bot launch_sim.launch.py
+    ros2 launch my_bot launch_real_sim.launch.py
     cd ~/your_ws
     rviz2 -d src/my_bot/robot_view.rviz
     cd ~/your_ws
