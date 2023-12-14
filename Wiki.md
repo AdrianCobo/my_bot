@@ -214,9 +214,10 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 # Dificultades encontradas:
 - Actualización de paquetes de Ros.
 - Descubrimiento de nodos de Ros en diferentes maquinas por wifi.
-- Impresión 3D
-- Falta de documentación de la medida de los taladros de varios de los componentes (Camara, etc)
+- Impresión 3D.
+- Falta de documentación de la medida de los taladros de varios de los componentes (Camara, etc).
 - Paralelo de las ruedas.
+- Precisión y exactitud de los encoders.
 
 # Referencias
 - [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
