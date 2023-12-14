@@ -225,7 +225,6 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 - [Xacro](https://wiki.ros.org/xacro)
 - [Urdf](https://wiki.ros.org/urdf)
 - [Tf](https://wiki.ros.org/tf)
-- [Lidar](https://www.slamtec.com/en/lidar/a1)
 - [Teleop_twist_keyboard](https://wiki.ros.org/teleop_twist_keyboard)
 - [teleop_twist_joy](https://wiki.ros.org/teleop_twist_joy)
 - [Lidar](https://www.slamtec.com/en/lidar/a1)
