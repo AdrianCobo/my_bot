@@ -211,6 +211,13 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación o de los nodos necesariós para ejecutar el codigo en un robot real parecido.
 
+# Dificultades encontradas:
+- Actualización de paquetes de Ros.
+- Descubrimiento de nodos de Ros en diferentes maquinas por wifi.
+- Impresión 3D
+- Falta de documentación de la medida de los taladros de varios de los componentes (Camara, etc)
+- Paralelo de las ruedas.
+
 # Referencias
 - [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
 - [Gazebo](https://gazebosim.org/home)
