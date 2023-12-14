@@ -213,4 +213,15 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 
 # Referencias
 - [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
+- [Gazebo](https://gazebosim.org/home)
+- [Xacro](https://wiki.ros.org/xacro)
+- [Urdf](https://wiki.ros.org/urdf)
+- [Tf](https://wiki.ros.org/tf)
+- [Lidar](https://www.slamtec.com/en/lidar/a1)
+- [Teleop_twist_keyboard](https://wiki.ros.org/teleop_twist_keyboard)
+- [teleop_twist_joy](https://wiki.ros.org/teleop_twist_joy)
+- [Lidar](https://www.slamtec.com/en/lidar/a1)
+- [Joy](https://wiki.ros.org/joy)
+- [Slam_toolbox](https://wiki.ros.org/slam_toolbox)
+- [Nav2](https://navigation.ros.org/)
 - [Plansys2](https://plansys2.github.io/)
