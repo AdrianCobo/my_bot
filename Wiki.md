@@ -13,20 +13,20 @@ Proyecto basado en el canal de youtube de [Articulated Robotics](https://www.you
 
 
 # Objetivo General  
-Este proyecto tiene como objetivo desarrollar y simular un robot diferencial del tamaño de una caja de zapatos utilizando las capacidades de ROS 2 para la simulación y control de robots. A lo largo de las fases del proyecto, se explorarán diversas tecnologías y conceptos esenciales en robótica.
+El objetivo de este proyecto es desarrollar y simular un robot diferencial del tamaño de una caja de zapatos, utilizando las capacidades de ROS 2 para la simulación y control de robots. A lo largo de las fases del proyecto, se explorarán diversas tecnologías y conceptos esenciales en robótica.
 
 # Fase 1: Simulación
 
 ## Fase 1.1: Uso de Tfs
-La primera aproximación elegida fue entender como funcionaba el sistema de transformadas en ros para poder verfificar el correcto comportamiento durante la simulación de nuestro robot a traves del paquete tf2
+La primera aproximación elegida fue entender cómo funcionaba el sistema de transformadas en ROS para verificar el comportamiento correcto durante la simulación de nuestro robot a través del paquete tf2.
 
 https://github.com/AdrianCobo/my_bot/assets/98641977/d725b8a4-27a4-4976-9d00-0e46af1a7a92
 
 ## Fase 1.2: Diseño de Robot a partir de URDF
-Una vez entendido como funcionan los sistemas de transformadas para las articulaciones del robot, se decidió modelar el robot utilizando el formato URDF para que fuese compatible con gazebo. Para ayudarnos en esta tarea se decidió utilizar también Xacro facilitando muchisimo esta tarea.
+Una vez comprendido cómo funcionan los sistemas de transformadas para las articulaciones del robot, se optó por modelar el robot utilizando el formato URDF para que fuera compatible con Gazebo. Para facilitar esta tarea, se decidió también utilizar Xacro, lo que simplificó enormemente el proceso.
 
 ## Fase 1.3: Gazebo
-Una vez que estaba listo el fichero URDF, se le añadieron los plugins necesarios para que Gazebo lo pudiese entender y se decidió crear ficheros .world y launcher para facilitar el lanzamiento de la simulación.
+Con el archivo URDF listo, se incorporaron los plugins necesarios para que Gazebo pudiera interpretarlo. Además, se tomó la decisión de crear archivos .world y un lanzador para facilitar el inicio de la simulación.
 
 ```console
     ros2 launch my_bot launch_real_sim.launch.py
@@ -38,11 +38,11 @@ Puedes ver el video de demostración aqui: [(Youtube)](https://youtu.be/H0Chc4Lr
 
 # Fase 2: Simulación de sensores y actuadores
 
-Una vez que ya se tenia la simulacíon del chasis se tuvo como objetivo la simulación de sensores (camara, camara con rgbd y lidar) así como el controlador diferencial. Todo esto fue bastante facil de hacer debido a los plugins ofrecidos por gazebo para la correcta simulacion. Simplemente teniamos que añadir estos plugins usando xacro y generando el urdf que usaría gazebo para la correcta simulación. 
+Una vez que se tenía la simulación del chasis, el objetivo pasó a ser la simulación de sensores (cámara, cámara con RGBD y LIDAR), así como el controlador diferencial. Todo esto resultó bastante sencillo de realizar gracias a los plugins ofrecidos por Gazebo para una simulación precisa. Simplemente teníamos que añadir estos plugins utilizando Xacro y generando el URDF que Gazebo utilizaría para la correcta simulación.
 
-Para comprobar que todo funcionaba correctamente se utilizo rviz2 para ver los datos sensados y el paquete teleop_twist_keyboard para comandar velocidades al controlador de motores.
+Para verificar el correcto funcionamiento, se empleó RViz2 para visualizar los datos captados y el paquete teleop_twist_keyboard para enviar comandos de velocidad al controlador de motores.
 
-Estos ficheros se pueden ver en:
+Estos archivos se pueden revisar en:
 - [Caramara](https://github.com/AdrianCobo/my_bot/blob/main/description/camera.xacro)
 - [Caramara RGBD](https://github.com/AdrianCobo/my_bot/blob/main/description/depth_camera.xacro)
 - [Lidar](https://github.com/AdrianCobo/my_bot/blob/main/description/lidar.xacro)
@@ -59,19 +59,19 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/-zVjHXez
 
 # Fase 3: Control por Joystick y uso de ros2_control.
 
-Aunque el controlador diferencial facilitado por gazebo funciona bien, como se quería que el proyecto no solo fuese un robot simulado si no que se llevase a la realidad, se decidió usar el paquete estandard de ros para el control de motores (ros2_control) ya que luego nos facilitaria mucho la vida para comunicarnos con los motores y encoders del robot real y además el controlador es bastante mejor.
+Aunque el controlador diferencial proporcionado por Gazebo funciona correctamente, dado que se buscaba que el proyecto no solo se quedara en un robot simulado, sino que se llevara a la realidad, se optó por utilizar el paquete estándar de ROS para el control de motores (ros2_control). Esto no solo facilitaría la comunicación con los motores y encoders del robot real, sino que además el controlador resulta considerablemente mejor.
 
-Como en los casos anteriores, simplemente teniamos que configurar bien en un archivo .xacro los pluggins necesarios para emplear este paquete pudiendose ver el fichero [aquí](https://github.com/AdrianCobo/my_bot/blob/main/description/ros2_control.xacro)
+Como en los casos anteriores, simplemente tuvimos que configurar adecuadamente en un archivo .xacro los plugins necesarios para emplear este paquete. El fichero correspondiente se puede revisar aquí.
 
-Tambien como el control con teleop_twist_keyboard a veces puede ser un poco incomodo, se decidió implementar tambien un control a traves de un mando de play 4 para ello, se usó el paquete de ros2 joy el cual combierte los valores analogicos del joystick a un mensaje de ros2 de tipo joy y el paquete teleop_twist_joy que combierte los mensajes de tipo joy a tipo cmd que son los mensajes que entiende el controlador de motores.
+Además, dado que el control con teleop_twist_keyboard puede resultar incómodo en algunas ocasiones, también se decidió implementar un control a través de un mando de PlayStation 4. Para lograrlo, se utilizó el paquete ros2 joy, que convierte los valores analógicos del joystick en un mensaje de ROS2 de tipo joy, y el paquete teleop_twist_joy, que convierte los mensajes de tipo joy a tipo cmd, que son los mensajes que comprende el controlador de motores.
 
-*El launcher de la simulacion también lanza los nodos del joystick
+*Cabe destacar que el lanzador de la simulación también inicia los nodos del joystick.
 
 # Fase 4: Mapeado y navegación autónoma.
 
-Para esta fase se decidió usar los paquetes mas populares de ros2 para ambos temas. Para la construcción de mapas se usó el paquete slam_toolbox y para navegación autonoma nav2. 
+Para esta fase, se optó por utilizar los paquetes más populares de ROS2 para ambos temas. Se empleó el paquete slam_toolbox para la construcción de mapas y el paquete nav2 para la navegación autónoma.
 
-Para que funcionase correctamente simplemente teniamos que instalar los paquetes necesarios y completar los ficheros de configuración de ambos paquetes para que se cumpliesen nuestros requerimientos. Ademas slam_toolbox ofrece un panel para rviz2 que facilita mucho el almacenamiento de los mapas generados.
+Para lograr un funcionamiento correcto, solo fue necesario instalar los paquetes necesarios y completar los archivos de configuración de ambos paquetes según nuestros requerimientos. Además, slam_toolbox ofrece un panel para RViz2 que simplifica en gran medida el almacenamiento de los mapas generados.
 
 ```console
     ros2 launch my_bot launch_real_sim.launch.py
@@ -89,7 +89,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/tctQYJnH
 
 # Fase 5: Planificación
 
-Se pensó también que era buena idea pensar algún uso real que se le podría dar a este robotito y como por aquel entonces la practica propuesta para la asignatura de Planificación y robótica de serviciós era la de un robot de patrullaje se decidio probar a realiza este ejercicio usando el paquete de plansys2 junto con las tecnicas de mapeado y navegación autonoma explicadas antes.
+Se consideró una excelente idea pensar en algún uso real para este robot. En ese momento, la práctica propuesta para la asignatura de Planificación y Robótica de Servicios era la de un robot de patrullaje. Por lo tanto, se decidió llevar a cabo este ejercicio utilizando el paquete plansys2, junto con las técnicas de mapeado y navegación autónoma explicadas anteriormente.
 
 Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs0qQ)
 
@@ -197,11 +197,11 @@ https://github.com/daquinga2020/my_bot/assets/90764494/03134156-ade7-4f7a-be5d-b
 
 # Fase 8: Sensores y actuadores reales
 
-Una vez ya completado las pruebas de simulación, se decidio comprar los componentes necesariós para poder testear el circuito del robot. 
+Una vez completadas las pruebas de simulación, se tomó la decisión de adquirir los componentes necesarios para realizar las pruebas en el circuito del robot.
 
-Lo mas complicado fue la comunicación de los sensores y actuadores con ros2 en concreto con el controlador de motores y el arduino ya que hacía falta crear un bridge entre ros2 y arduino o usar uno ya hecho [Opción elegida](https://github.com/joshnewans/serial_motor_demo). También usamos [codigo de Buzzology](https://github.com/AdrianCobo/diffdrive_arduino.git) para el control diferencial de los motores con arduino.
+La tarea más desafiante fue establecer la comunicación entre los sensores y actuadores con ROS2, en particular con el controlador de motores y el Arduino. Esto requería la creación de un puente entre ROS2 y Arduino, y se optó por utilizar una solución ya existente, como se puede ver en esta opción. Además, se aprovechó el código proporcionado por Buzzology código de Buzzology para implementar el control diferencial de los motores con Arduino.
 
-Finalmente para el lidar se compró uno que era comptaible con ros2 y que tenia ya sus propios nodos y launchers de ros2.
+Finalmente, para el LIDAR, se adquirió un modelo compatible con ROS2 que ya contaba con sus propios nodos y lanzadores de ROS2.
 
 Puedes ver la lista con todos los componentes y precios [aquí](https://github.com/AdrianCobo/my_bot/blob/readme_updated/Bill.md)
 
@@ -209,7 +209,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 
 [![Alt text](https://img.youtube.com/vi/Q_-EYw8jdps/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
 
-Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación o de los nodos necesariós para ejecutar el codigo en un robot real parecido.
+Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación, así como los nodos necesarios para ejecutar el código en un robot real parecido.
 
 # Referencias
 - [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
