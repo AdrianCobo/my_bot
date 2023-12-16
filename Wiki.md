@@ -220,7 +220,7 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 # Tests:
 
 ## Joystick control
-[![Alt text](https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg)](https://www.youtube.com/shorts/yJ6x7noP0hA)
+[![Alt text](https://yt3.googleusercontent.com/KT4Z1J3JNjCKyoHJ9xA7ygYh9z6PdhswTFh7YPeBkGz8lkxBnhvhUrZqDoduH89xp_3Sd2Ord0I=s176-c-k-c0x00ffffff-no-rj)](https://www.youtube.com/shorts/yJ6x7noP0hA)
 
 ## My bot Mk2 lidar
 <div align="center">
