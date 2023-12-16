@@ -108,10 +108,17 @@ Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorn
 ### Primeros pasos para el diseño del circuito
 En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
 
-[!Circuito]([https://github.com/AdrianCobo/my_bot/imgs/circuit2d/Circuito.jpeg](https://github.com/dduro2020/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg))
+
+Aqui hay una imagen del resultado del circuito:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg" alt="Circuito" width="500"/>
+
+Para la creación del gif se tomaron 2 frames, el primero el del circuito original y luego otro se pintó por encima de todos los cables rojos(5V/12V) como si tuviesen corriente, además se añadió una imagen de una mano para simular que se pulsa el botón. Para la mano nos ayudamos de una IA que recorta todo el fondo de forma que no se viese un cuadrado blanco al añadir la imagen al .svg.
 
 
-[!Circuito](https://github.com/AdrianCobo/my_bot/animate/animacion_circuito.jpeg)
+Y aqui una demostración del gif:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/>
 
 ### Diseño de las vistas
 En este paso además de utilizar inkscape habia que ir copiando las coordenadas donde colocábamos cada elemento para guardar nuestra escala. En inkscape los elementos se van guardando por mm, y como nuestra escala real era de cm, se convirtió cada cm a 5mm, de esta forma era mucho más visual en inkscape.
