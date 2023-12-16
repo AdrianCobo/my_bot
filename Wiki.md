@@ -108,7 +108,7 @@ Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorn
 ### Primeros pasos para el diseño del circuito
 En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
 
-[!Circuito](https://github.com/AdrianCobo/my_bot/imgs/circuit2d/Circuito.jpeg)
+[!Circuito]([https://github.com/AdrianCobo/my_bot/imgs/circuit2d/Circuito.jpeg](https://github.com/dduro2020/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg))
 
 
 [!Circuito](https://github.com/AdrianCobo/my_bot/animate/animacion_circuito.jpeg)
