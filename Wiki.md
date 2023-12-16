@@ -115,6 +115,10 @@ Aqui hay una imagen del resultado del circuito:
 
 Para la creación del gif se tomaron 2 frames, el primero el del circuito original y luego otro se pintó por encima de todos los cables rojos(5V/12V) como si tuviesen corriente, además se añadió una imagen de una mano para simular que se pulsa el botón. Para la mano nos ayudamos de una IA que recorta todo el fondo de forma que no se viese un cuadrado blanco al añadir la imagen al .svg.
 
+Comando para la creación del gif:
+```bash
+convert -delay 100 -loop 0 img1.svg img2.svg animate.gif
+```
 
 Y aqui una demostración del gif:
 
