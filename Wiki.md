@@ -217,6 +217,18 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación, así como los nodos necesarios para ejecutar el código en un robot real parecido.
 
+# Tests:
+## My bot Mk2 lidar
+<div align="center">
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/lidar_test.jpg" alt="explode"></a>
+</div>
+
+## My bot Mk2 camera
+<div align="center">
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/camera_test.jpg" alt="explode"></a>
+</div>
+
+
 # Dificultades encontradas:
 - Actualización de paquetes de Ros.
 - Descubrimiento de nodos de Ros en diferentes maquinas por wifi.
