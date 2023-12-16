@@ -220,15 +220,18 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 # Tests:
 
 ## Joystick control
+
+Puedes ver un video de demostración aqui: [(Youtube)](https://www.youtube.com/shorts/yJ6x7noP0hA)
+
 [![Alt text](https://yt3.googleusercontent.com/KT4Z1J3JNjCKyoHJ9xA7ygYh9z6PdhswTFh7YPeBkGz8lkxBnhvhUrZqDoduH89xp_3Sd2Ord0I=s176-c-k-c0x00ffffff-no-rj)](https://www.youtube.com/shorts/yJ6x7noP0hA)
 
 ## My bot Mk2 lidar
-<div align="center">
+<div>
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/lidar_test.jpg" alt="explode"></a>
 </div>
 
 ## My bot Mk2 camera
-<div align="center">
+<div>
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/camera_test.jpg" alt="explode"></a>
 </div>
 
