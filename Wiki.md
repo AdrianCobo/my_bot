@@ -2,11 +2,17 @@
 
 Proyecto basado en el canal de youtube de [Articulated Robotics](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## My bot Mk1
+## My bot Mk2
+<div align="center">
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
+</div>
 
+## My bot Mk1
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_real.jpg" alt="explode"></a>
 </div>
+
+## My bot Mk0
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_sim.png" alt="explode"></a>
 </div>
