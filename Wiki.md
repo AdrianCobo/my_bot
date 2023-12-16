@@ -218,6 +218,10 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación, así como los nodos necesarios para ejecutar el código en un robot real parecido.
 
 # Tests:
+
+## Joystick control
+[![Alt text](https://www.youtube.com/shorts/yJ6x7noP0hA/0.jpg)](https://www.youtube.com/shorts/yJ6x7noP0hA)
+
 ## My bot Mk2 lidar
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/lidar_test.jpg" alt="explode"></a>
