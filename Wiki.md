@@ -103,6 +103,16 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs
 
 # Fase 6: Diseño 2D
 
+Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorno gráfico para el diseño del circuito y planos del chasis como desde la terminal para imágenes animadas (gifs).
+
+### Primeros pasos para el diseño del circuito
+En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
+
+### Diseño de las vistas
+En este paso además de utilizar inkscape habia que ir copiando las coordenadas donde colocábamos cada elemento para guardar nuestra escala. En inkscape los elementos se van guardando por mm, y como nuestra escala real era de cm, se convirtió cada cm a 5mm, de esta forma era mucho más visual en inkscape.
+
+Para añadir las flechas con las distancias se utilizaron nuevamente segmentos modificando las puntas de cada uno.
+
 # Fase 7: Diseño 3D
 
 El software utilizado para el diseño 3D es **FreeCAD**.
