@@ -2,7 +2,7 @@
 
 [Project based on Articulated Robotics youtube channel](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## My bot Mk1
+## My bot
 
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
