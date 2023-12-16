@@ -125,6 +125,10 @@ En este paso además de utilizar inkscape habia que ir copiando las coordenadas 
 
 Para añadir las flechas con las distancias se utilizaron nuevamente segmentos modificando las puntas de cada uno.
 
+Aqui todas las vistas:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/vistas/all.png" alt="Circuito" width="500"/>
+
 # Fase 7: Diseño 3D
 
 El software utilizado para el diseño 3D es **FreeCAD**.
