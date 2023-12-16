@@ -108,6 +108,14 @@ Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorn
 ### Primeros pasos para el diseño del circuito
 En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
 
+<div align="center">
+<img width=500px src="https://github.com/dduro2020/my_bot/imgs/circuit2d/Circuito.jpeg" alt="explode"></a>
+</div>
+
+<div align="center">
+<img width=500px src="https://github.com/dduro2020/my_bot/animate/animacion_circuito.gif" alt="explode"></a>
+</div>
+
 ### Diseño de las vistas
 En este paso además de utilizar inkscape habia que ir copiando las coordenadas donde colocábamos cada elemento para guardar nuestra escala. En inkscape los elementos se van guardando por mm, y como nuestra escala real era de cm, se convirtió cada cm a 5mm, de esta forma era mucho más visual en inkscape.
 
