@@ -211,6 +211,24 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación, así como los nodos necesarios para ejecutar el código en un robot real parecido.
 
+# Dificultades encontradas:
+- Actualización de paquetes de Ros.
+- Descubrimiento de nodos de Ros en diferentes maquinas por wifi.
+- Impresión 3D.
+- Falta de documentación de la medida de los taladros de varios de los componentes (Camara, etc).
+- Paralelo de las ruedas.
+- Precisión y exactitud de los encoders.
+
 # Referencias
 - [Canal de Josh Newans](https://www.youtube.com/@ArticulatedRobotics)
+- [Gazebo](https://gazebosim.org/home)
+- [Xacro](https://wiki.ros.org/xacro)
+- [Urdf](https://wiki.ros.org/urdf)
+- [Tf](https://wiki.ros.org/tf)
+- [Teleop_twist_keyboard](https://wiki.ros.org/teleop_twist_keyboard)
+- [teleop_twist_joy](https://wiki.ros.org/teleop_twist_joy)
+- [Lidar](https://www.slamtec.com/en/lidar/a1)
+- [Joy](https://wiki.ros.org/joy)
+- [Slam_toolbox](https://wiki.ros.org/slam_toolbox)
+- [Nav2](https://navigation.ros.org/)
 - [Plansys2](https://plansys2.github.io/)
