@@ -49,8 +49,8 @@ Una vez que se tenía la simulación del chasis, el objetivo pasó a ser la simu
 Para verificar el correcto funcionamiento, se empleó RViz2 para visualizar los datos captados y el paquete teleop_twist_keyboard para enviar comandos de velocidad al controlador de motores.
 
 Estos archivos se pueden revisar en:
-- [Caramara](https://github.com/AdrianCobo/my_bot/blob/main/description/camera.xacro)
-- [Caramara RGBD](https://github.com/AdrianCobo/my_bot/blob/main/description/depth_camera.xacro)
+- [Camara](https://github.com/AdrianCobo/my_bot/blob/main/description/camera.xacro)
+- [Camara RGBD](https://github.com/AdrianCobo/my_bot/blob/main/description/depth_camera.xacro)
 - [Lidar](https://github.com/AdrianCobo/my_bot/blob/main/description/lidar.xacro)
 - [Controlador diferencial de Gazebo](https://github.com/AdrianCobo/my_bot/blob/main/description/gazebo_control.xacro)
 
