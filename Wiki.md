@@ -249,7 +249,7 @@ Recuerda también que tienes todos los pasos para la correcta puesta a punto y l
 
 # Tests:
 
-## Joystick control
+## My bot Mk2 Joystick control
 
 Puedes ver un video de demostración aqui: [(Youtube)](https://www.youtube.com/shorts/yJ6x7noP0hA)
 
