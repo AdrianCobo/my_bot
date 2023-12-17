@@ -106,7 +106,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs
 Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorno gráfico para el diseño del circuito y planos del chasis como desde la terminal para imágenes animadas (gifs).
 
 ### Primeros pasos para el diseño del circuito
-En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
+En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado [(Canal de Josh Newans)](https://www.youtube.com/watch?v=_FGYVgAti9M) por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
 
 
 Aqui hay una imagen del resultado del circuito:
