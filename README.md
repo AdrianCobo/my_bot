@@ -86,7 +86,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ### Real Robot Connection Diagram
 
 <div align="center">
-<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg" alt="explode"></a>
+<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/></a>
 </div>
 
 ### Real Robot Installation
