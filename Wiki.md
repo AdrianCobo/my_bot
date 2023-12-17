@@ -103,6 +103,36 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs
 
 # Fase 6: Diseño 2D
 
+Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorno gráfico para el diseño del circuito y planos del chasis como desde la terminal para imágenes animadas (gifs).
+
+### Primeros pasos para el diseño del circuito
+En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
+
+
+Aqui hay una imagen del resultado del circuito:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg" alt="Circuito" width="500"/>
+
+Para la creación del gif se tomaron 2 frames, el primero el del circuito original y luego otro se pintó por encima de todos los cables rojos(5V/12V) como si tuviesen corriente, además se añadió una imagen de una mano para simular que se pulsa el botón. Para la mano nos ayudamos de una IA que recorta todo el fondo de forma que no se viese un cuadrado blanco al añadir la imagen al .svg.
+
+Comando para la creación del gif:
+```bash
+convert -delay 100 -loop 0 img1.svg img2.svg animate.gif
+```
+
+Y aqui una demostración del gif:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/>
+
+### Diseño de las vistas
+En este paso además de utilizar inkscape habia que ir copiando las coordenadas donde colocábamos cada elemento para guardar nuestra escala. En inkscape los elementos se van guardando por mm, y como nuestra escala real era de cm, se convirtió cada cm a 5mm, de esta forma era mucho más visual en inkscape.
+
+Para añadir las flechas con las distancias se utilizaron nuevamente segmentos modificando las puntas de cada uno.
+
+Aqui todas las vistas:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/vistas/all.png" alt="Circuito" width="500"/>
+
 # Fase 7: Diseño 3D
 
 El software utilizado para el diseño 3D es **FreeCAD**.
