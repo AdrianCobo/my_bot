@@ -67,7 +67,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/-zVjHXez
 
 Aunque el controlador diferencial proporcionado por Gazebo funciona correctamente, dado que se buscaba que el proyecto no solo se quedara en un robot simulado, sino que se llevara a la realidad, se optó por utilizar el paquete estándar de ROS para el control de motores (ros2_control). Esto no solo facilitaría la comunicación con los motores y encoders del robot real, sino que además el controlador resulta considerablemente mejor.
 
-Como en los casos anteriores, simplemente tuvimos que configurar adecuadamente en un archivo .xacro los plugins necesarios para emplear este paquete. El fichero correspondiente se puede revisar aquí.
+Como en los casos anteriores, simplemente tuvimos que configurar adecuadamente en un archivo .xacro los plugins necesarios para emplear este paquete. El fichero correspondiente se puede revisar [(Aquí)](https://github.com/AdrianCobo/my_bot/blob/main/description/ros2_control.xacro)
 
 Además, dado que el control con teleop_twist_keyboard puede resultar incómodo en algunas ocasiones, también se decidió implementar un control a través de un mando de PlayStation 4. Para lograrlo, se utilizó el paquete ros2 joy, que convierte los valores analógicos del joystick en un mensaje de ROS2 de tipo joy, y el paquete teleop_twist_joy, que convierte los mensajes de tipo joy a tipo cmd, que son los mensajes que comprende el controlador de motores.
 
