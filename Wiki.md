@@ -2,11 +2,17 @@
 
 Proyecto basado en el canal de youtube de [Articulated Robotics](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## My bot Mk1
+## My bot Mk2
+<div align="center">
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
+</div>
 
+## My bot Mk1
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_real.jpg" alt="explode"></a>
 </div>
+
+## My bot Mk0
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_sim.png" alt="explode"></a>
 </div>
@@ -43,8 +49,8 @@ Una vez que se tenía la simulación del chasis, el objetivo pasó a ser la simu
 Para verificar el correcto funcionamiento, se empleó RViz2 para visualizar los datos captados y el paquete teleop_twist_keyboard para enviar comandos de velocidad al controlador de motores.
 
 Estos archivos se pueden revisar en:
-- [Caramara](https://github.com/AdrianCobo/my_bot/blob/main/description/camera.xacro)
-- [Caramara RGBD](https://github.com/AdrianCobo/my_bot/blob/main/description/depth_camera.xacro)
+- [Camara](https://github.com/AdrianCobo/my_bot/blob/main/description/camera.xacro)
+- [Camara RGBD](https://github.com/AdrianCobo/my_bot/blob/main/description/depth_camera.xacro)
 - [Lidar](https://github.com/AdrianCobo/my_bot/blob/main/description/lidar.xacro)
 - [Controlador diferencial de Gazebo](https://github.com/AdrianCobo/my_bot/blob/main/description/gazebo_control.xacro)
 
@@ -61,7 +67,7 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/-zVjHXez
 
 Aunque el controlador diferencial proporcionado por Gazebo funciona correctamente, dado que se buscaba que el proyecto no solo se quedara en un robot simulado, sino que se llevara a la realidad, se optó por utilizar el paquete estándar de ROS para el control de motores (ros2_control). Esto no solo facilitaría la comunicación con los motores y encoders del robot real, sino que además el controlador resulta considerablemente mejor.
 
-Como en los casos anteriores, simplemente tuvimos que configurar adecuadamente en un archivo .xacro los plugins necesarios para emplear este paquete. El fichero correspondiente se puede revisar aquí.
+Como en los casos anteriores, simplemente tuvimos que configurar adecuadamente en un archivo .xacro los plugins necesarios para emplear este paquete. El fichero correspondiente se puede revisar [aquí](https://github.com/AdrianCobo/my_bot/blob/main/description/ros2_control.xacro)
 
 Además, dado que el control con teleop_twist_keyboard puede resultar incómodo en algunas ocasiones, también se decidió implementar un control a través de un mando de PlayStation 4. Para lograrlo, se utilizó el paquete ros2 joy, que convierte los valores analógicos del joystick en un mensaje de ROS2 de tipo joy, y el paquete teleop_twist_joy, que convierte los mensajes de tipo joy a tipo cmd, que son los mensajes que comprende el controlador de motores.
 
@@ -96,6 +102,36 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/MbuiRqzs
 [![Alt text](https://img.youtube.com/vi/MbuiRqzs0qQ/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
 
 # Fase 6: Diseño 2D
+
+Para esta parte del proyecto se ha utilizado **Inkscape**, tanto desde su entorno gráfico para el diseño del circuito y planos del chasis como desde la terminal para imágenes animadas (gifs).
+
+### Primeros pasos para el diseño del circuito
+En esta parte se trazaron 'cables' con lineas rectas de colores, el circuito ya estaba diseñado [(Canal de Josh Newans)](https://www.youtube.com/watch?v=_FGYVgAti9M) por lo que solo hubo que ir copiando los elementos fisicos del sistema y añadir los cables.
+
+
+Aqui hay una imagen del resultado del circuito:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg" alt="Circuito" width="500"/>
+
+Para la creación del gif se tomaron 2 frames, el primero el del circuito original y luego otro se pintó por encima de todos los cables rojos(5V/12V) como si tuviesen corriente, además se añadió una imagen de una mano para simular que se pulsa el botón. Para la mano nos ayudamos de una IA que recorta todo el fondo de forma que no se viese un cuadrado blanco al añadir la imagen al .svg.
+
+Comando para la creación del gif:
+```bash
+convert -delay 100 -loop 0 img1.svg img2.svg animate.gif
+```
+
+Y aqui una demostración del gif:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/>
+
+### Diseño de las vistas
+En este paso además de utilizar inkscape habia que ir copiando las coordenadas donde colocábamos cada elemento para guardar nuestra escala. En inkscape los elementos se van guardando por mm, y como nuestra escala real era de cm, se convirtió cada cm a 5mm, de esta forma era mucho más visual en inkscape.
+
+Para añadir las flechas con las distancias se utilizaron nuevamente segmentos modificando las puntas de cada uno.
+
+Aqui todas las vistas:
+
+<img src="https://github.com/dduro2020/my_bot/blob/main/imgs/vistas/all.png" alt="Circuito" width="500"/>
 
 # Fase 7: Diseño 3D
 
@@ -210,6 +246,25 @@ Puedes ver un video de demostración aqui: [(Youtube)](https://youtu.be/Q_-EYw8j
 [![Alt text](https://img.youtube.com/vi/Q_-EYw8jdps/0.jpg)](https://www.youtube.com/watch?v=Q_-EYw8jdps)
 
 Recuerda también que tienes todos los pasos para la correcta puesta a punto y lanzamiento del entorno de simulación, así como los nodos necesarios para ejecutar el código en un robot real parecido.
+
+# Tests:
+
+## My bot Mk2 Joystick control
+
+Puedes ver un video de demostración aqui: [(Youtube)](https://www.youtube.com/shorts/yJ6x7noP0hA)
+
+[![Alt text](https://yt3.googleusercontent.com/KT4Z1J3JNjCKyoHJ9xA7ygYh9z6PdhswTFh7YPeBkGz8lkxBnhvhUrZqDoduH89xp_3Sd2Ord0I=s176-c-k-c0x00ffffff-no-rj)](https://www.youtube.com/shorts/yJ6x7noP0hA)
+
+## My bot Mk2 lidar
+<div>
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/lidar_test.jpg" alt="explode"></a>
+</div>
+
+## My bot Mk2 camera
+<div>
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/test/camera_test.jpg" alt="explode"></a>
+</div>
+
 
 # Dificultades encontradas:
 - Actualización de paquetes de Ros.

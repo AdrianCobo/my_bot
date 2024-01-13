@@ -2,10 +2,10 @@
 
 [Project based on Articulated Robotics youtube channel](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## My bot Mk1
+## My bot
 
 <div align="center">
-<img width=500px height=300px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
+<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
 </div>
 <div align="center">
 <img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_sim.png" alt="explode"></a>
@@ -86,7 +86,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ### Real Robot Connection Diagram
 
 <div align="center">
-<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/circuit2d/Circuito.jpeg" alt="explode"></a>
+<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/></a>
 </div>
 
 ### Real Robot Installation
