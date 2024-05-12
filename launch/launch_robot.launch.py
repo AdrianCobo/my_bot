@@ -28,11 +28,11 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
 
-    # joystick = IncludeLaunchDescription(
-    #             PythonLaunchDescriptionSource([os.path.join(
-    #                 get_package_share_directory(package_name),'launch','joystick.launch.py'
-    #             )])
-    # )
+    joystick = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','joystick.launch.py'
+                )])
+    )
 
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
@@ -107,7 +107,9 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
-        #joystick, # need to have the joystic process running on a terminar so you need to launch it mannualy (#TODO)
+        joystick, # need to have the joystic process running on a terminar so you need to launch it mannualy (#TODO)
+                  # Also if i have the joystick running on the pc and not the robot i need to launch joytick launcher on pc and on robot. Thats why it is uncommented
+                  # because this launcher is launched on bring up
         twist_mux,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
