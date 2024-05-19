@@ -9,6 +9,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch.actions import RegisterEventHandler
 from launch.event_handlers import OnProcessStart
+import launch_ros.descriptions
 
 from launch_ros.actions import Node
 
@@ -53,7 +54,7 @@ def generate_launch_description():
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        parameters=[{'robot_description': robot_description},
+        parameters=[{'robot_description': launch_ros.descriptions.ParameterValue(robot_description, value_type=str)},
                     controller_params_file]
     )
 
