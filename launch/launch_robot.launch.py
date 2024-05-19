@@ -45,9 +45,10 @@ def generate_launch_description():
         )
 
     
-
-
-    robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
+    # Process the URDF file
+    pkg_path = os.path.join(get_package_share_directory('my_bot'))
+    xacro_file = os.path.join(pkg_path, 'description', 'real_robot.urdf.xacro')
+    robot_description = Command(['xacro ', xacro_file, ' use_ros2_control:=', 'True', ' sim_mode:=', 'False'])
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 
