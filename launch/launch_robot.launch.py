@@ -109,9 +109,7 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
-        joystick, # need to have the joystic process running on a terminar so you need to launch it mannualy (#TODO)
-                  # Also if i have the joystick running on the pc and not the robot i need to launch joytick launcher on pc and on robot. Thats why it is uncommented
-                  # because this launcher is launched on bring up
+        joystick, # joystick is launched because it will be waiting untill you plug one if there is none connected
         twist_mux,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
