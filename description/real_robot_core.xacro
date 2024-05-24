@@ -81,7 +81,7 @@
     <!-- continuous because it will tourn around continuously-->
     <!-- the z axis must be pointing to the horizontal and out of the robot-->
     <joint name="left_wheel_joint" type="continuous">
-        <origin xyz="0.255 0.155 0.015" rpy="-${pi/2} 0.0 0.0"/>
+        <origin xyz="0.255 0.131 0.015" rpy="-${pi/2} 0.0 0.0"/>
         <parent link="chassis_link"/>
         <child link="left_wheel_link"/>
         <axis xyz="0.0 0.0 1.0"/>
@@ -116,7 +116,7 @@
     <!-- continuous because it will tourn around continuously-->
     <!-- the z axis must be pointing to the horizontal and out of the robot-->
     <joint name="right_wheel_joint" type="continuous">
-        <origin xyz="0.255 -0.155 0.015" rpy="${pi/2} 0.0 0.0"/>
+        <origin xyz="0.255 -0.131 0.015" rpy="${pi/2} 0.0 0.0"/>
         <parent link="chassis_link"/>
         <child link="right_wheel_link"/>
         <axis xyz="0.0 0.0 -1.0"/>
