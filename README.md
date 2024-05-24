@@ -208,3 +208,4 @@ available soon
 [Bill](https://github.com/AdrianCobo/my_bot/blob/readme_updated/Bill.md)
 
 TODO: the caster wheel doesn't have color
+TODO: rviz can not load .stl and .dae models
