@@ -31,6 +31,7 @@
 
     <!-- Using diferential mobile robots its better to use de center of the two wheels as the base link-->
     <!-- Because all the geometry and turns(its going to be the center of rotation) will get easyer to get references from there-->
+    <!-- The base_link is usually the chassis or body of a robot that is immediately attached to the ground or world reference frame. -->
     <link name="base_link"></link>
 
     <!-- BASE_FOOTPRINT LINK necessary for slam_toolbox-->
@@ -47,8 +48,10 @@
     <!-- CHASIS LINK -->
 
     <!-- the origin of the chassis will be just behind the center of rotation-->
+    <!-- as the caster wheel is higher, the box is rotated in y -->
+    <!-- the mass is created based on the joint, not the link -->
     <joint name="chase_joint" type="fixed">
-        <origin xyz="-0.255 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="-0.255 0.0 0.06" rpy="0.0 0.15652 0.0"/>
         <parent link="base_link"/>
         <child link="chassis_link"/>
     </joint>
@@ -62,13 +65,13 @@
             <material name="grey"/>
         </visual>
         <collision>
-            <origin xyz="0.165 0.0 0.06" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.16 0.0 0.07" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <box size="0.32 0.225 0.14"/>
             </geometry>
         </collision>
-        <xacro:inertial_box mass="0.5" x="0.33" y="0.225" z="0.12">
-            <origin xyz="0.165 0.0 0.06" rpy="0.0 0.0 0.0"/>
+        <xacro:inertial_box mass="0.5" x="0.32" y="0.225" z="0.14">
+            <origin xyz="0.165 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </xacro:inertial_box>
     </link>
 
