@@ -161,13 +161,14 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <!-- <cylinder radius="0.0175" length="0.018"/> -->
-                <mesh filename="/home/acobo/Desktop/ros2_ws/src/my_bot/meshes/caster_wheel/caster_wheel.dae" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
+            <material name="blue" />
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="/home/acobo/Desktop/ros2_ws/src/my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.018" radius="0.0175">
@@ -176,6 +177,7 @@
     </link>
 
     <gazebo reference="caster_wheel_link">
+        <material>Gazebo/Blue</material>
         <mu1 value="0.0001"/>
         <mu2 value="0.0001"/>
     </gazebo>
