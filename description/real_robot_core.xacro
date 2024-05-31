@@ -167,7 +167,7 @@
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.dae" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.018" radius="0.0175">
