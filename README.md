@@ -43,7 +43,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 
 ```console
     ros2 launch my_bot launch_real_sim.launch.py
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p use_sim_time:=true
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQI8)
@@ -58,7 +58,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
     ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=true
     cd ~/your_ws
     rviz2 -d src/my_bot/robot_view.rviz
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p use_sim_time:=true
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQuCk)
