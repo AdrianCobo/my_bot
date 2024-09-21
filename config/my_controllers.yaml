@@ -11,7 +11,7 @@ controller_manager:
 
 diff_cont:
   ros__parameters:
-    publish_rate: 30.0
+    publish_rate: 50.0
 
     base_frame_id: base_link
 
@@ -21,19 +21,21 @@ diff_cont:
     wheel_radius: 0.035
 
     use_stamped_vel: false
+    cmd_vel_timeout: 0.5
+    
+    # uncomment this if you are not using encoders
+    # open_loop: true
 
-    # open_loop: false
+    #odom_frame_id: odom
+    #enable_odom_tf: true
 
     # wheels_per_side: x
     # wheel_separation_multiplier: x
     # left_wheel_radius_multiplier: x
     # right_wheel_radius_multiplier: x
 
-    # odom_frame_id: x
     # pose_covariance_diagonal: x
     # twist_covariance_diagonal: x
-    # open_loop: x
-    # enable_odom_tf: x
 
     # cmd_vel_timeout: x
     # publish_limited_velocity: x
