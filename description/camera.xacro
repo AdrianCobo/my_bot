@@ -38,6 +38,7 @@
             <visualize>false</visualize>
             <update_rate>10</update_rate>
             <camera>
+                <camera_info_topic>camera/camera_info</camera_info_topic>
                 <horizontal_fov>1.089</horizontal_fov>
                 <image>
                     <format>R8G8B8</format>
@@ -49,9 +50,8 @@
                     <far>8.0</far>
                 </clip>
             </camera>
-            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-                <frame_name>camera_link_optical</frame_name>
-            </plugin>
+            <topic>camera/image_raw</topic>
+            <gz_frame_id>camera_link_optical</gz_frame_id>
         </sensor>
     </gazebo>
 

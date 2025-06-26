@@ -88,7 +88,6 @@
         <parent link="chassis_link"/>
         <child link="left_wheel_link"/>
         <axis xyz="0.0 0.0 1.0"/>
-        <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="left_wheel_link">
@@ -123,7 +122,6 @@
         <parent link="chassis_link"/>
         <child link="right_wheel_link"/>
         <axis xyz="0.0 0.0 -1.0"/>
-        <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
     </joint>
 
     <link name="right_wheel_link">
@@ -164,13 +162,13 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
                 <!-- <cylinder radius="0.0175" length="0.018"/> -->
-                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.dae" scale="0.001 0.001 0.001"/>
+                <mesh filename="model://my_bot/meshes/caster_wheel/caster_wheel.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <mesh filename="package://my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="model://my_bot/meshes/caster_wheel/caster_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.018" radius="0.0175">

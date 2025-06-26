@@ -16,7 +16,7 @@
 ### Installation for simulation:
 
 ```console
-    sudo apt-get install ros-humble-gazebo-ros-pkgs ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-twist-mux ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control ros-humble-slam-toolbox ros-humble-xacro
+    sudo apt-get install ros-jazzy-ros-gz ros-jazzy-twist-stamper ros-jazzy-gz-ros2-control ros-jazzy-teleop-twist-joy* ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-twist-mux ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-slam-toolbox ros-jazzy-xacro
     cd ~/your_ws/src
     git clone (this repo)
     git clone https://github.com/AdrianCobo/Pal_Gazebo_Worlds.git

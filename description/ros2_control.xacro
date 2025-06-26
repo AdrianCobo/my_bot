@@ -16,11 +16,15 @@
             </hardware>
             <joint name="left_wheel_joint">
                 <command_interface name="velocity"/>
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
                 <state_interface name="position"/>
                 <state_interface name="velocity"/>
             </joint>
             <joint name="right_wheel_joint">
                 <command_interface name="velocity"/>
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
                 <state_interface name="position"/>
                 <state_interface name="velocity"/>
             </joint>
@@ -30,7 +34,7 @@
     <xacro:if value="$(arg sim_mode)">
         <ros2_control name="GazeboSystem" type="system">
             <hardware>
-                <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
             </hardware>
             <joint name="left_wheel_joint">
                 <command_interface name="velocity">
@@ -52,7 +56,7 @@
     </xacro:if>
 
     <gazebo>
-        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
             <parameters>$(find my_bot)/config/my_controllers.yaml</parameters>
             <parameters>$(find my_bot)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
         </plugin>
