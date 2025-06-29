@@ -57,6 +57,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
 
 ### Gazebo Simulation and nav2 localization
 ToDo: update  
+
 ```console
     ros2 launch my_bot launch_sim.launch.py
     cd ~/your_ws
