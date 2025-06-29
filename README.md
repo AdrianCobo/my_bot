@@ -56,7 +56,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
 [![Alt text](https://img.youtube.com/vi/yNdHQ1RQuCk/0.jpg)](https://www.youtube.com/watch?v=yNdHQ1RQuCk)
 
 ### Gazebo Simulation and nav2 localization
-ToDo: update
+ToDo: update  
 ```console
     ros2 launch my_bot launch_sim.launch.py
     cd ~/your_ws
@@ -74,7 +74,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ## Real Robot 
 
 ### Real Robot Connection Diagram
-ToDo: add
+ToDo: add  
 
 ### Real Robot Installation
 ToDo: update
