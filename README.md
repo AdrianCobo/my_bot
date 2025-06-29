@@ -2,15 +2,6 @@
 
 [Project based on Articulated Robotics youtube channel](https://www.youtube.com/@ArticulatedRobotics/videos)
 
-## My bot
-
-<div align="center">
-<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/main/imgs/mybot_mk2.jpg" alt="explode"></a>
-</div>
-<div align="center">
-<img width=500px src="https://github.com/AdrianCobo/my_bot/blob/readme_updated/imgs/my_bot_mk1_sim.png" alt="explode"></a>
-</div>
-
 ## Simulation
 
 ### Installation for simulation:
