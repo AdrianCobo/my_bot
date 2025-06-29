@@ -25,7 +25,7 @@ def generate_launch_description():
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','real_robot_spawner.launch.py'
+                    get_package_share_directory(package_name),'launch','robot_spawner.launch.py'
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
 
@@ -47,7 +47,7 @@ def generate_launch_description():
     
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path, 'description', 'real_robot.urdf.xacro')
+    xacro_file = os.path.join(pkg_path, 'description', 'robot.urdf.xacro')
     robot_description_content = Command(['xacro ', xacro_file, ' use_ros2_control:=', 'True', ' sim_mode:=', 'False'])
     robot_description = {"robot_description": robot_description_content}
 

@@ -16,10 +16,9 @@
 ### Installation for simulation:
 
 ```console
-    sudo apt-get install ros-jazzy-ros-gz ros-jazzy-twist-stamper ros-jazzy-gz-ros2-control ros-jazzy-teleop-twist-joy* ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-twist-mux ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-slam-toolbox ros-jazzy-xacro
+    sudo apt-get install ros-jazzy-ros-gz ros-jazzy-twist-stamper ros-jazzy-gz-ros2-control ros-jazzy-teleop-twist-joy* ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-twist-mux ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-slam-toolbox ros-jazzy-xacro ros-jazzy-v4l2-camera
     cd ~/your_ws/src
     git clone (this repo)
-    git clone https://github.com/AdrianCobo/Pal_Gazebo_Worlds.git
     colcon build --symlink-install
     copy the gazebo models at the models folder to your gazebo models folder
 ```
@@ -29,7 +28,7 @@
 ### Gazebo Simulation and joystick control:
 
 ```console
-    ros2 launch my_bot launch_real_sim.launch.py
+    ros2 launch my_bot launch_sim.launch.py
 ```
 
 You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4LrjQw)
@@ -42,7 +41,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/H0Chc4Lrj
 2.
 
 ```console
-    ros2 launch my_bot launch_real_sim.launch.py
+    ros2 launch my_bot launch_sim.launch.py
     ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p use_sim_time:=true
 ```
 
@@ -53,7 +52,7 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/-zVjHXezQ
 ### Gazebo Simulation and Mapping
 
 ```console
-    ros2 launch my_bot launch_real_sim.launch.py
+    ros2 launch my_bot launch_sim.launch.py
     cd ~/your_ws
     ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/my_bot/config/mapper_params_online_async.yaml use_sim_time:=true
     cd ~/your_ws
@@ -66,9 +65,9 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/yNdHQ1RQu
 [![Alt text](https://img.youtube.com/vi/yNdHQ1RQuCk/0.jpg)](https://www.youtube.com/watch?v=yNdHQ1RQuCk)
 
 ### Gazebo Simulation and nav2 localization
-
+ToDo: update
 ```console
-    ros2 launch my_bot launch_real_sim.launch.py
+    ros2 launch my_bot launch_sim.launch.py
     cd ~/your_ws
     rviz2 -d src/my_bot/robot_view.rviz
     cd ~/your_ws
@@ -84,12 +83,10 @@ You can see the video demonstration here: [(Youtube)](https://youtu.be/tctQYJnHB
 ## Real Robot 
 
 ### Real Robot Connection Diagram
-
-<div align="center">
-<img src="https://github.com/dduro2020/my_bot/blob/main/animate/animacion_circuito.gif" alt="Circuito" width="500"/></a>
-</div>
+ToDo: add
 
 ### Real Robot Installation
+ToDo: update
     sudo apt-get install ros-humble-gazebo-ros-pkgs ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-twist-mux ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control ros-humble-slam-toolbox ros-humble-xacro
     cd ~/your_ws/src
     git clone (this repo)
