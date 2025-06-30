@@ -11,21 +11,20 @@ controller_manager:
 
 diff_cont:
   ros__parameters:
-
+    type: diff_drive_controller/DiffDriveController
     publish_rate: 50.0
-
     base_frame_id: base_link
 
-    left_wheel_names: ['left_wheel_joint']
-    right_wheel_names: ['right_wheel_joint']
-    wheel_separation: 0.262
+    left_wheel_names: ["left_wheel_joint"]
+    right_wheel_names: ["right_wheel_joint"]
+    wheel_separation: 0.185
     wheel_radius: 0.035
 
     # use_stamped_vel: false
-    #cmd_vel_timeout: 0.5
+    cmd_vel_timeout: 0.5
     
     # uncomment this if you are not using encoders
-    # open_loop: true
+    #open_loop: true
 
     #odom_frame_id: odom
     #enable_odom_tf: true

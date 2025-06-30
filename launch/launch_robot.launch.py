@@ -44,6 +44,14 @@ def generate_launch_description():
             remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
         )
 
+    twist_stamper = Node(
+    package='twist_stamper',
+    executable='twist_stamper',
+    parameters=[{'use_sim_time': True}],
+    remappings=[('/cmd_vel_in', '/diff_cont/cmd_vel_unstamped'),
+                ('/cmd_vel_out', '/diff_cont/cmd_vel')]
+    )
+
     
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('my_bot'))
@@ -116,6 +124,7 @@ def generate_launch_description():
         rsp,
         joystick, # joystick is launched because it will be waiting untill you plug one if there is none connected
         twist_mux,
+        twist_stamper,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner
