@@ -1,0 +1,53 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam defaultTextAlignment center
+skinparam linetype ortho
+
+title Diagrama de dependencias para la simulación
+
+package "my_bot" {
+  rectangle "launch_robot.launch.py" as launch_robot
+  rectangle "robot_spawner.launch.py\n\n-use_sim_time: false\n-use_ros2_control: true" as spawn_robot
+  rectangle "Generate robot's URDF\n\n-xacro_file: ./description/robot.urdf.xacro\n-use_ros2_control: true\n-sim_mode: false" as xacro
+  rectangle "robot_state_publisher_node\n\n-robot_description: robot URDF\n-use_sim_time: false" as state_pub
+  rectangle "Generate Robot\nTFs system" as state_pub_sol
+  rectangle "joystick.launch.py\n\n use_sim_time: false" as joystick
+  rectangle "joy_node\n\n params: ./config/joystick.yaml\nuse_sim_time: false" as joy
+  rectangle "teleop_node\n\n params: ./config/joystick.yaml\nuse_sim_time: false" as teleop
+  rectangle "joystick control available" as jl
+  rectangle "twist_mux_node\n\n params: ./config/twist_mux.yaml" as tmux
+  rectangle "simultaneous joystick and nav2 speed\ncommands available (unstamped)" as unstamped
+  rectangle "simultaneous joystick and nav2 speed\ncommands available (stamped)" as stamped
+  rectangle "twist_stamper_node" as tstamp
+  rectangle "controller_manager\nros2_control_node\n\nparams: ./config/my_controllers.yaml" as control_ros2
+  rectangle "ros2_control node\n waiting for controllers" as wait_r2c
+  rectangle "controller_manager\n\ntype: diff_cont\n--param-file ./config/my_controllers.yaml" as df
+  rectangle "differential controller available" as dfav
+  rectangle "controller_manager\n\ntype: joint_broad" as br
+  rectangle "joint broadcaster available" as brav
+
+  launch_robot --> spawn_robot
+  spawn_robot --> xacro
+  spawn_robot --> state_pub
+  xacro --> state_pub : robot URDF
+  state_pub --> state_pub_sol
+  launch_robot --> joystick
+  joystick --> joy
+  joystick --> teleop
+  joy --> jl
+  teleop --> jl
+  launch_robot --> tmux
+  tmux --> unstamped
+  unstamped -> tstamp
+  launch_robot --> tstamp
+  tstamp --> stamped
+  launch_robot --> control_ros2
+  control_ros2 --> wait_r2c
+  launch_robot --> df
+  df --> dfav
+  launch_robot --> br
+  br --> brav
+}
+
+@enduml
+

@@ -31,10 +31,9 @@ def generate_launch_description():
 
     joystick = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','joystick.launch.py'
-                )])
+                    get_package_share_directory(package_name),'launch','joystick.launch.py')]),
+                launch_arguments={'use_sim_time': 'false'}.items()
     )
-
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
     twist_mux = Node(
@@ -47,17 +46,10 @@ def generate_launch_description():
     twist_stamper = Node(
     package='twist_stamper',
     executable='twist_stamper',
-    parameters=[{'use_sim_time': True}],
     remappings=[('/cmd_vel_in', '/diff_cont/cmd_vel_unstamped'),
                 ('/cmd_vel_out', '/diff_cont/cmd_vel')]
     )
 
-    
-    # Process the URDF file
-    pkg_path = os.path.join(get_package_share_directory('my_bot'))
-    xacro_file = os.path.join(pkg_path, 'description', 'robot.urdf.xacro')
-    robot_description_content = Command(['xacro ', xacro_file, ' use_ros2_control:=', 'True', ' sim_mode:=', 'False'])
-    robot_description = {"robot_description": robot_description_content}
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 

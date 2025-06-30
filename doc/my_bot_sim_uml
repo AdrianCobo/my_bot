@@ -1,0 +1,71 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam defaultTextAlignment center
+skinparam linetype ortho
+
+title Diagrama de dependencias para la simulación
+
+package "my_bot" {
+  rectangle "launch_sim.launch.py" as launch_sim
+  rectangle "robot_spawner.launch.py\n\n-use_sim_time: true\n-use_ros2_control: true" as spawn_robot
+  rectangle "Generate robot's URDF\n\n-xacro_file: ./description/robot.urdf.xacro\n-use_ros2_control: true\n-sim_mode: true" as xacro
+  rectangle "robot_state_publisher_node\n\n-robot_description: robot URDF\n-use_sim_time: true" as state_pub
+  rectangle "Generate Robot\nTFs system" as state_pub_sol
+  rectangle "joystick.launch.py\n\n use_sim_time: true" as joystick
+  rectangle "joy_node\n\n params: ./config/joystick.yaml\nuse_sim_time: true" as joy
+  rectangle "teleop_node\n\n params: ./config/joystick.yaml\nuse_sim_time: true" as teleop
+  rectangle "joystick control available" as jl
+  rectangle "twist_mux_node\n\n params: ./config/twist_mux.yaml\nuse_sim_sime: true" as tmux
+  rectangle "simultaneous joystick and nav2 speed\ncommands available (unstamped)" as unstamped
+  rectangle "simultaneous joystick and nav2 speed\ncommands available (stamped)" as stamped
+  rectangle "twist_stamper_node\n\nuse_sim_time: true" as tstamp
+  rectangle "controller_manager\n\ntype: diff_cont" as df
+  rectangle "differential controller available" as dfav
+  rectangle "controller_manager\n\ntype: joint_broad" as br
+  rectangle "joint broadcaster available" as brav
+  rectangle "launch_gazebo.py\n\nuse_sim_time: true" as gz_launch
+  rectangle "Add Gazebo\nResource Path\n\npath: ./share" as gpath
+  rectangle "3D robot models\navailable" as 3dmodels
+  rectangle "gz_sim.launch.py\n\ngz_args: -r -v4 ./worlds/empty.world\non_exit_shutdown: true" as gzsim
+  rectangle "simulation started" as startsim
+  rectangle "create_node\n\n-topic: robot_description\n-name: my_bot\n -z: 0.1" as create
+  rectangle "robot spawned\n at simulation" as spawn
+  rectangle "gz_ros_bridge\n\n--ros-args -p config_file:./config/gz_ros_bridge.yaml" as bridge
+  rectangle "gazebo and ros2\ntopics bridge available" as gzbrav
+  rectangle "gz_ros_img_bridge\n\n/camera/image_raw" as img_bridge
+  rectangle "gazebo and ros2\nimg_bridge available" as gzimgbrav
+
+  launch_sim --> spawn_robot
+  spawn_robot --> xacro
+  spawn_robot --> state_pub
+  xacro --> state_pub : robot URDF
+  state_pub --> state_pub_sol
+  launch_sim --> joystick
+  joystick --> joy
+  joystick --> teleop
+  joy --> jl
+  teleop --> jl
+  launch_sim --> tmux
+  tmux --> unstamped
+  unstamped -> tstamp
+  launch_sim --> tstamp
+  tstamp --> stamped
+  launch_sim --> df
+  df --> dfav
+  launch_sim --> br
+  br --> brav
+  launch_sim --> gz_launch
+  gz_launch --> gpath
+  gpath --> 3dmodels
+  gz_launch --> gzsim
+  gzsim --> startsim
+  gz_launch --> create
+  create --> spawn
+  gz_launch --> bridge
+  bridge --> gzbrav
+  gz_launch --> img_bridge
+  img_bridge --> gzimgbrav
+}
+
+@enduml
+
