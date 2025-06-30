@@ -14,6 +14,10 @@
     copy the gazebo models at the models folder to your gazebo models folder
 ```
 
+## Simulation Workflow
+
+![my_bot_sym_diagram](https://github.com/user-attachments/assets/b3fab182-51ce-4c06-9fe3-a3388e9e6f76)
+
 ### Simulation Launch examples:
 
 ### Gazebo Simulation and joystick control:
